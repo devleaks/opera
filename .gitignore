@@ -28,8 +28,9 @@ share/python-wheels/
 MANIFEST
 .yarn/
 node_modules/
-prepare/
 data/
+
+*.geojson
 
 
 # PyInstaller

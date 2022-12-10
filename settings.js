@@ -419,8 +419,8 @@ module.exports = {
     functionGlobalContext: {
         // os:require('os'),
         h3:require('h3-js'),
-        turf:require('@turf/turf'),
-        geoflatbush:require('geoflatbush')
+        turf:require('@turf/turf')
+//        geoflatbush:require('geoflatbush')
 //        flatbush:require('flatbush')
     },
 

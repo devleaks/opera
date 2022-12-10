@@ -606,7 +606,7 @@
         "type": "debug",
         "z": "955d0aae4f0edf24",
         "name": "debug 10",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -737,8 +737,8 @@
         "y": 200,
         "wires": [
             [
-                "f1c92d61e05e4423",
-                "9271bfcb27aa6090"
+                "9271bfcb27aa6090",
+                "559b3d8cd1c36063"
             ]
         ]
     },
@@ -775,7 +775,7 @@
         "type": "debug",
         "z": "047cb2b68f071355",
         "name": "comparison",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -831,7 +831,7 @@
         "to": "",
         "reg": false,
         "x": 1200,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "253a8a8fc891376b"
@@ -1015,8 +1015,8 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 1050,
-        "y": 240,
+        "x": 1030,
+        "y": 200,
         "wires": [
             [
                 "ead28dcf07eaec35",
@@ -1129,20 +1129,37 @@
         "wires": []
     },
     {
-        "id": "f1c92d61e05e4423",
+        "id": "7b8ecf998db64557",
+        "type": "debug",
+        "z": "047cb2b68f071355",
+        "name": "wire",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "559b3d8cd1c36063",
         "type": "switch",
         "z": "047cb2b68f071355",
-        "name": "",
+        "name": "wire",
         "property": "payload.properties",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "else"
+                "t": "hask",
+                "v": "message",
+                "vt": "str"
             },
             {
-                "t": "hask",
-                "v": "emit",
-                "vt": "str"
+                "t": "else"
             }
         ],
         "checkall": "true",
@@ -1155,73 +1172,7 @@
                 "7b8ecf998db64557"
             ],
             [
-                "559b3d8cd1c36063"
-            ]
-        ]
-    },
-    {
-        "id": "7b8ecf998db64557",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "no emit",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "559b3d8cd1c36063",
-        "type": "switch",
-        "z": "047cb2b68f071355",
-        "name": "emit type",
-        "property": "payload.properties",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "hask",
-                "v": "message",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "service",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "mission",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "flight",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 460,
-        "y": 200,
-        "wires": [
-            [
-                "7b8ecf998db64557"
-            ],
-            [
-                "282b2529e7986ce9"
-            ],
-            [
-                "831bbf56c24dd3d6"
-            ],
-            [
-                "4615b814bd302471"
+                "f1c92d61e05e4423"
             ]
         ]
     },
@@ -1235,8 +1186,8 @@
                 "t": "set",
                 "p": "emit_type",
                 "pt": "msg",
-                "to": "aircraft",
-                "tot": "str"
+                "to": "payload.properties.emit[\"emit-type\"]",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -1245,64 +1196,10 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 240,
+        "y": 180,
         "wires": [
             [
                 "49e2c12da5337aca"
-            ]
-        ]
-    },
-    {
-        "id": "831bbf56c24dd3d6",
-        "type": "change",
-        "z": "047cb2b68f071355",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "emit_type",
-                "pt": "msg",
-                "to": "checkpoint",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 200,
-        "wires": [
-            [
-                "01fb44f0c4d8c591"
-            ]
-        ]
-    },
-    {
-        "id": "282b2529e7986ce9",
-        "type": "change",
-        "z": "047cb2b68f071355",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "emit_type",
-                "pt": "msg",
-                "to": "gse",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 160,
-        "wires": [
-            [
-                "01fb44f0c4d8c591"
             ]
         ]
     },
@@ -1311,8 +1208,8 @@
         "type": "function",
         "z": "047cb2b68f071355",
         "name": "at aerodrome?",
-        "func": "// Point inside area of interest polygon\nconst aerodrome = context.global.get(\"aerodrome\");\nconst fence = aerodrome.features[0]\nif (turf.booleanPointInPolygon(msg.payload.geometry.coordinates, fence)) {\n    return msg;\n}",
-        "outputs": 1,
+        "func": "// Point inside area of interest polygon\nconst aerodrome = context.global.get(\"aerodrome\");\nconst fence = aerodrome.features[0]\nif (turf.booleanPointInPolygon(msg.payload.geometry.coordinates, fence)) {\n    return [null, msg];\n}\nreturn [msg, null];",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n//const geoms = context.flow.get('geometries');\n",
         "finalize": "",
@@ -1323,8 +1220,11 @@
             }
         ],
         "x": 860,
-        "y": 240,
+        "y": 180,
         "wires": [
+            [
+                "ead6fbcebd0293f8"
+            ],
             [
                 "01fb44f0c4d8c591"
             ]
@@ -1342,8 +1242,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 360,
+        "x": 1200,
+        "y": 320,
         "wires": []
     },
     {
@@ -1361,6 +1261,95 @@
         "statusType": "auto",
         "x": 560,
         "y": 980,
+        "wires": []
+    },
+    {
+        "id": "f1c92d61e05e4423",
+        "type": "switch",
+        "z": "047cb2b68f071355",
+        "name": "emit?",
+        "property": "payload.properties",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "emit",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "4615b814bd302471"
+            ],
+            [
+                "21715cdf5c5117b4"
+            ]
+        ]
+    },
+    {
+        "id": "21715cdf5c5117b4",
+        "type": "debug",
+        "z": "047cb2b68f071355",
+        "name": "no emit",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ead6fbcebd0293f8",
+        "type": "function",
+        "z": "047cb2b68f071355",
+        "name": "around?",
+        "func": "// Point inside area of interest polygon\nconst geoms = context.global.get(\"airport\");\nconst inside = geoms.features.filter(f => turf.booleanPointInPolygon(msg.payload.geometry.coordinates, f));\nmsg.payload.properties._inside = inside.map(f => f.id);\nif (msg.payload.properties._inside.length > 0) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n//const geoms = context.flow.get('geometries');\n",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "turf",
+                "module": "@turf/turf"
+            }
+        ],
+        "x": 1040,
+        "y": 160,
+        "wires": [
+            [
+                "a5cc5476abccc859"
+            ]
+        ]
+    },
+    {
+        "id": "a5cc5476abccc859",
+        "type": "debug",
+        "z": "047cb2b68f071355",
+        "name": "around",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 160,
         "wires": []
     },
     {
@@ -1409,7 +1398,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 100,
+        "y": 40,
         "wires": [
             [
                 "3ce128e96bce2813"
@@ -1425,7 +1414,7 @@
         "action": "",
         "pretty": false,
         "x": 630,
-        "y": 100,
+        "y": 40,
         "wires": [
             [
                 "97f343c3e2bd8d6f"
@@ -1445,7 +1434,7 @@
         "payloadType": "json",
         "block": false,
         "x": 390,
-        "y": 100,
+        "y": 40,
         "wires": [
             [
                 "0ef9cf1179d2a499"
@@ -1480,7 +1469,7 @@
         "mapopt": "",
         "mapwms": false,
         "x": 880,
-        "y": 140,
+        "y": 220,
         "wires": []
     },
     {
@@ -1493,8 +1482,8 @@
         "topic": "emitpy:raw",
         "obj": true,
         "timeout": 0,
-        "x": 160,
-        "y": 220,
+        "x": 140,
+        "y": 320,
         "wires": [
             [
                 "7c20b169e2e1ad9f"
@@ -1513,8 +1502,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 260,
+        "x": 880,
+        "y": 320,
         "wires": []
     },
     {
@@ -1536,12 +1525,177 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
-        "y": 220,
+        "x": 380,
+        "y": 320,
         "wires": [
             [
                 "97f343c3e2bd8d6f",
                 "1ce897882686d0e1"
+            ]
+        ]
+    },
+    {
+        "id": "803b05bb43a16e76",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "38004e0c391774a4"
+            ]
+        ]
+    },
+    {
+        "id": "c40632476643ae7b",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "38004e0c391774a4",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:flight",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "c40632476643ae7b"
+            ]
+        ]
+    },
+    {
+        "id": "a969271f71fef5cf",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "5bb83ebd8a761a83"
+            ]
+        ]
+    },
+    {
+        "id": "328b1931cd791272",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "5bb83ebd8a761a83",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:service",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "328b1931cd791272"
+            ]
+        ]
+    },
+    {
+        "id": "77a91445959a337c",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "310e20d64b11bb2f"
+            ]
+        ]
+    },
+    {
+        "id": "464aacf0d003f8da",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "310e20d64b11bb2f",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:mission",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "464aacf0d003f8da"
             ]
         ]
     },
@@ -2195,7 +2349,7 @@
         "type": "file in",
         "z": "af63c5f168f03802",
         "name": "load file",
-        "filename": "data/aircraft-aoi.geojson",
+        "filename": "data/flight.geojson",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
@@ -2224,7 +2378,7 @@
         "id": "fbcf2b5de73deed2",
         "type": "inject",
         "z": "af63c5f168f03802",
-        "name": "aircraft",
+        "name": "flight",
         "props": [
             {
                 "p": "payload"
@@ -2279,7 +2433,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:aircraft",
+                "to": "airport:geometries:flight",
                 "tot": "str"
             },
             {
@@ -2325,7 +2479,7 @@
         "type": "file in",
         "z": "af63c5f168f03802",
         "name": "load file",
-        "filename": "data/gse-aoi.geojson",
+        "filename": "data/service.geojson",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
@@ -2399,7 +2553,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:gse",
+                "to": "airport:geometries:service",
                 "tot": "str"
             },
             {
@@ -2445,7 +2599,7 @@
         "type": "file in",
         "z": "af63c5f168f03802",
         "name": "load file",
-        "filename": "data/checkpoint-aoi.geojson",
+        "filename": "data/mission.geojson",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
@@ -2519,7 +2673,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:checkpoint",
+                "to": "airport:geometries:mission",
                 "tot": "str"
             },
             {
@@ -2565,7 +2719,7 @@
         "type": "file in",
         "z": "af63c5f168f03802",
         "name": "load file",
-        "filename": "data/aerodrome-aoi.geojson",
+        "filename": "data/airport.geojson",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
@@ -2639,7 +2793,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:aerodrome",
+                "to": "airport:geometries:airport",
                 "tot": "str"
             },
             {
