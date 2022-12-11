@@ -50,331 +50,78 @@
     {
         "id": "af63c5f168f03802",
         "type": "tab",
-        "label": "Keep",
+        "label": "Load data",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "2b674150e0c6799d",
-        "type": "tab",
-        "label": "JSONata Functions",
-        "disabled": false,
+        "id": "5aa781e7fd97726c",
+        "type": "subflow",
+        "name": "Set DB 0",
         "info": "",
-        "env": []
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "39a637f8a38eb153"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "49b1d3a8943ea1fe",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#800000",
+        "icon": "node-red/db.svg"
     },
     {
-        "id": "14bc35a7e871612e",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Aggregation functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "7f7a4f9ed924376d",
-            "01f76c339f4adbd0",
-            "156d2db7093d7558",
-            "081cd34d6d10eff0",
-            "199fed429d430789",
-            "2f9225a89d7fc482",
-            "4db6caf373859923",
-            "e484adc4ab3f4dfe",
-            "599ebbfcc3bfb18c",
-            "af16cf6a74150575",
-            "b40ecdc26eb65a87",
-            "c542a10e1e9711be"
+        "id": "d4a976387a559a5b",
+        "type": "subflow",
+        "name": "set DB 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "6036dee6c9e5cce9"
+                    }
+                ]
+            }
         ],
-        "x": 634,
-        "y": 59,
-        "w": 612,
-        "h": 202
-    },
-    {
-        "id": "bd78a6345689686e",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Numeric functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "a30467908fac9463",
-            "fc277a1902454d3c",
-            "7224275fee07915e",
-            "f6c9478912e95bc4",
-            "48b06fdef4c9ffc7",
-            "02cf895c04cc2d17",
-            "8cd41f907d7b91e1",
-            "5d35112b0d7ffeb0",
-            "35d492f50182f0e9",
-            "1b8e6db00e94f577",
-            "50ee5beef4616939",
-            "cb3905a7fc7807dc",
-            "b784ce33202f9e4a",
-            "2b8feafd3ebed3db",
-            "1af0b15b623b4243",
-            "5f58f7b332bc5032",
-            "6a2a296d28e805e8",
-            "27784537ed674d95",
-            "46d1ce782ac05500",
-            "a1007695caca77de",
-            "f5a7b9ba44d6da4f",
-            "f0854f7725cd1e0a",
-            "7cd53419b0c387ef",
-            "fcea2e9a5a9a9a31",
-            "0e87c5fd5d165065",
-            "a58db5b349b23760",
-            "cc2aa57778a71052",
-            "d225d4b187f80ae9",
-            "cd2f7b9ece57ec42",
-            "da137d0fda54aa1d",
-            "bcc10f8b59b05223",
-            "4aa9214f104589e5",
-            "68faa6604649be08",
-            "c879b13b62b7e9e9",
-            "46054494447c8ae2",
-            "e224ce9d130829a1"
+        "out": [
+            {
+                "x": 480,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "ac20ac8a8a24cde2",
+                        "port": 0
+                    }
+                ]
+            }
         ],
-        "x": 14,
-        "y": 939,
-        "w": 612,
-        "h": 522
-    },
-    {
-        "id": "ef756230b8be8f60",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata String functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "3cc6261891386b5f",
-            "8e042b0206d96ec3",
-            "b5288005cfaed881",
-            "c4e236b5f403ca46",
-            "139d3d075aef541b",
-            "97198c59935dad84",
-            "4d7f61e7faedcb5a",
-            "e48f9f8fb961a5d6",
-            "66744dce571a09f0",
-            "1cc1025e35c9a45f",
-            "0778494e0323db2d",
-            "f30e4fadc037c830",
-            "3079704ac5de15ab",
-            "8a34220c1cf0ddf2",
-            "721d1f7a9c3c34ad",
-            "ac702313720942fd",
-            "20a8bff4c82dc0a6",
-            "5358376cf87433d3",
-            "fd1ca4d65201e56e",
-            "1597936a4dd07adc",
-            "bc6a61999fd08781",
-            "bc6b032b788377d5",
-            "1c0fdc0f44e2d65d",
-            "f0028c6d46f58225",
-            "634bff34b4bfa755",
-            "471d0565d8107992",
-            "aaf9bfbca7e66685",
-            "1422679d35d613e6",
-            "15f7d0253372dacc",
-            "3578911993d1359b",
-            "0ad7bc5dbbb01e64",
-            "12bf1c0706c42cd9",
-            "382e989d6beed2b9",
-            "6032d7a86bd608af",
-            "9e39dce96c0e40ba",
-            "ceaf6f20ba283064",
-            "6a216142b72c7570",
-            "b191f4f849f6932b",
-            "a634125d8a135739",
-            "03ae99be7404fdd5",
-            "ed05c5a681fd1709",
-            "72ab71f8ff083acd",
-            "f6824991eb4a71e6",
-            "7256b2d99c71abb2",
-            "280344adbf650555",
-            "ed2e6980f986b9ae",
-            "8ac685159923c118",
-            "fee84a10519aa421",
-            "14a8c5089653d59f",
-            "58147d798906386f",
-            "37889b302715c27e",
-            "6f8cef3d757675b7",
-            "98056fd4c8ea54b0",
-            "265d1b2dc6aae07a",
-            "fdccd987154c9d12",
-            "aea93a05d365da9c",
-            "251698b309d07a7e",
-            "faad7e5e44d62653",
-            "d13dbe29814dadd4",
-            "e8d3957524002c5b",
-            "85f562c1f72f7317",
-            "2587c0a4b7cf100b",
-            "78900f26fea3faf7"
-        ],
-        "x": 14,
-        "y": 39,
-        "w": 612,
-        "h": 882
-    },
-    {
-        "id": "7f9221a083cba77c",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Boolean functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "e349d1491539c726",
-            "4253c825027547ad",
-            "6bc8446341b4b5f2",
-            "1725374f271e4efc",
-            "ba23fe1ffa16ed14",
-            "377b870d6377fa6a",
-            "db914e64bec8b614",
-            "188fe1c2d2ebb8e3",
-            "e6ab1014ef3d7b12"
-        ],
-        "x": 634,
-        "y": 279,
-        "w": 612,
-        "h": 162
-    },
-    {
-        "id": "340943aaa9afde77",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Array functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "f9c483f70a4914e0",
-            "654c7ea2cc076b7d",
-            "097dda9b77c22bbc",
-            "6c7dcaa639c75761",
-            "bb52ed5515e1600c",
-            "39348bddd6cd6ea4",
-            "6587273cf41528ac",
-            "37bc59e118a6145b",
-            "e4bc41c71f22c31c",
-            "af1434a6c955ae35",
-            "c19e927408c93b3c",
-            "31e9ea391e2d85e1",
-            "17602f594fda49bf",
-            "09b2c334fbdb315e",
-            "b73901b3c9abd775",
-            "d1b7e717ae08481a",
-            "9e8177571be8f99f",
-            "8b10eec1d8499638",
-            "3382776fb18d904d",
-            "7159dde8aba9e05c",
-            "da8f480b32e83de4"
-        ],
-        "x": 634,
-        "y": 459,
-        "w": 612,
-        "h": 322
-    },
-    {
-        "id": "c88dadefed23d4b9",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Date/Time functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fd352b5e5dc6694b",
-            "2df69d3de31443a9",
-            "7270656ece6828a3",
-            "5c92eeb77a6194d8",
-            "a25502239ecce614",
-            "74023126b34ed888",
-            "cfed144c068126e1",
-            "011afb255d074158",
-            "027fa6ccac0cbc56",
-            "c7751bd2f8c49d94",
-            "e4cf415c1974fc31",
-            "4c12d0e6c7d4268e"
-        ],
-        "x": 634,
-        "y": 1259,
-        "w": 612,
-        "h": 202
-    },
-    {
-        "id": "b9473f481d46341e",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Higher order functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "18d6a3564775eda6",
-            "50eaf8e14a07f52a",
-            "d5893c4cb59a4bdd",
-            "36b74a0ba9d50269",
-            "b82c63ced822b93b",
-            "351f1fe279abfa7f",
-            "ce71c4e4ac746a82",
-            "5b3f848b04096e1c",
-            "40b1d4409f6b8dd5",
-            "9ad04f517b2aa836",
-            "ec88ad1de0080364",
-            "23811eafe28ed4b0"
-        ],
-        "x": 1254,
-        "y": 59,
-        "w": 612,
-        "h": 202
-    },
-    {
-        "id": "d4f828aaee7233fb",
-        "type": "group",
-        "z": "2b674150e0c6799d",
-        "name": "JSONata Object functions",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "61eba193709b4747",
-            "b81ac77059018d6a",
-            "cae58acf1d4d93b0",
-            "c0a1f8ffaea953f2",
-            "51eb088026f66aa7",
-            "4c8ea5fc5fa0df83",
-            "6b58edf53c9aeb7e",
-            "ccf9e24c2cfc12cf",
-            "431b43d750db4608",
-            "48f3baac75b8cb33",
-            "802e2e41ec6aaa2d",
-            "7d381368a9723eb3",
-            "fc6db6f01385990e",
-            "a8a96fff189b0f6a",
-            "3a58277f580af7a4",
-            "39dc8115391725fd",
-            "6599d5d264063dd4",
-            "b1aea701f0274f22",
-            "8c5ea777d24b40b6",
-            "a43595f67aa34ea0",
-            "a89af6cedd3f2e0d",
-            "5b772280cd54e62a",
-            "f84533d7ab3f5a83",
-            "6461cdef7011b35b",
-            "988336dcd37a967f",
-            "16d4c7d19f1d655b",
-            "cfeb74d0e7f0153e",
-            "9e99aca1b6592c26"
-        ],
-        "x": 634,
-        "y": 799,
-        "w": 612,
-        "h": 442
+        "env": [],
+        "meta": {},
+        "color": "#800000",
+        "icon": "node-red/db.svg"
     },
     {
         "id": "9240c7042e038827",
@@ -541,6 +288,106 @@
         }
     },
     {
+        "id": "49b1d3a8943ea1fe",
+        "type": "redis-command",
+        "z": "5aa781e7fd97726c",
+        "server": "9240c7042e038827",
+        "command": "SELECT",
+        "name": "db 0",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 370,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39a637f8a38eb153",
+        "type": "change",
+        "z": "5aa781e7fd97726c",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "49b1d3a8943ea1fe"
+            ]
+        ]
+    },
+    {
+        "id": "ac20ac8a8a24cde2",
+        "type": "redis-command",
+        "z": "d4a976387a559a5b",
+        "server": "9240c7042e038827",
+        "command": "SELECT",
+        "name": "db 1",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 370,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6036dee6c9e5cce9",
+        "type": "change",
+        "z": "d4a976387a559a5b",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "ac20ac8a8a24cde2"
+            ]
+        ]
+    },
+    {
         "id": "7db4dc5027e1290e",
         "type": "redis-instance",
         "z": "955d0aae4f0edf24",
@@ -577,7 +424,7 @@
         "y": 140,
         "wires": [
             [
-                "15ae93ecc5e0fbc5"
+                "36f9d6921196a022"
             ]
         ]
     },
@@ -593,8 +440,8 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 350,
-        "y": 140,
+        "x": 210,
+        "y": 260,
         "wires": [
             [
                 "77bd3a1feed7d8c5"
@@ -606,15 +453,15 @@
         "type": "debug",
         "z": "955d0aae4f0edf24",
         "name": "debug 10",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 200,
+        "x": 540,
+        "y": 400,
         "wires": []
     },
     {
@@ -628,8 +475,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 570,
-        "y": 140,
+        "x": 430,
+        "y": 260,
         "wires": [
             [
                 "eaaf215fb08b0b42"
@@ -660,8 +507,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 140,
+        "x": 600,
+        "y": 260,
         "wires": [
             [
                 "ad521ec8f11ae2b9"
@@ -680,8 +527,8 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 940,
-        "y": 140,
+        "x": 800,
+        "y": 260,
         "wires": [
             [
                 "ab3d23c3a2d00932"
@@ -696,8 +543,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1110,
-        "y": 140,
+        "x": 970,
+        "y": 260,
         "wires": [
             [
                 "856d0d350468a4e0"
@@ -715,11 +562,80 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 200,
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "b6c4a75ee91e04ee",
+                "0c7a04c2d5b6ac2c"
+            ]
+        ]
+    },
+    {
+        "id": "36f9d6921196a022",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "456a5306fc5ea507"
+            ]
+        ]
+    },
+    {
+        "id": "b6c4a75ee91e04ee",
+        "type": "subflow:5aa781e7fd97726c",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "x": 380,
+        "y": 400,
         "wires": [
             [
                 "bfa613b30541e95b"
+            ]
+        ]
+    },
+    {
+        "id": "0c7a04c2d5b6ac2c",
+        "type": "debug",
+        "z": "955d0aae4f0edf24",
+        "name": "global saved",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "456a5306fc5ea507",
+        "type": "change",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "15ae93ecc5e0fbc5"
             ]
         ]
     },
@@ -733,12 +649,12 @@
         "topic": "emitpy:raw",
         "obj": true,
         "timeout": 0,
-        "x": 140,
-        "y": 200,
+        "x": 100,
+        "y": 80,
         "wires": [
             [
                 "9271bfcb27aa6090",
-                "559b3d8cd1c36063"
+                "f1c92d61e05e4423"
             ]
         ]
     },
@@ -759,7 +675,7 @@
             }
         ],
         "x": 530,
-        "y": 800,
+        "y": 700,
         "wires": [
             [
                 "974f2e7eace14b14"
@@ -784,7 +700,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 750,
-        "y": 860,
+        "y": 760,
         "wires": []
     },
     {
@@ -796,7 +712,7 @@
         "action": "",
         "pretty": false,
         "x": 360,
-        "y": 800,
+        "y": 700,
         "wires": [
             [
                 "26bc02f69d3eac8a",
@@ -821,7 +737,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "\"vehicles:lastpos:\" & msg.currpos.properties.icao24",
+                "to": "\"vehicles:lastpos:\" & msg.icao24",
                 "tot": "jsonata"
             }
         ],
@@ -830,8 +746,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
-        "y": 200,
+        "x": 1020,
+        "y": 100,
         "wires": [
             [
                 "253a8a8fc891376b"
@@ -851,7 +767,7 @@
         "payloadType": "json",
         "block": false,
         "x": 170,
-        "y": 300,
+        "y": 200,
         "wires": [
             [
                 "ee68d07e62e6b588"
@@ -871,7 +787,7 @@
         "payloadType": "json",
         "block": false,
         "x": 810,
-        "y": 700,
+        "y": 620,
         "wires": [
             [
                 "3a4513a0498550e6"
@@ -898,7 +814,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 660,
+        "y": 580,
         "wires": [
             [
                 "8b64f6a73424d53c"
@@ -914,7 +830,7 @@
         "action": "",
         "pretty": false,
         "x": 740,
-        "y": 620,
+        "y": 540,
         "wires": [
             [
                 "2d9297a8cd2b4d68"
@@ -940,12 +856,12 @@
         "repair": false,
         "outputs": 2,
         "x": 180,
-        "y": 360,
+        "y": 260,
         "wires": [
             [
                 "38df50cb0d75053d",
                 "974f2e7eace14b14",
-                "e3fa6b11aa6516f2"
+                "fc95c8b2ea0e731a"
             ],
             [
                 "43ac411e64727917"
@@ -966,7 +882,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 730,
-        "y": 340,
+        "y": 240,
         "wires": []
     },
     {
@@ -983,7 +899,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 850,
-        "y": 740,
+        "y": 660,
         "wires": []
     },
     {
@@ -996,7 +912,7 @@
         "topic": "",
         "obj": true,
         "x": 740,
-        "y": 820,
+        "y": 720,
         "wires": []
     },
     {
@@ -1015,8 +931,8 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 1030,
-        "y": 200,
+        "x": 850,
+        "y": 100,
         "wires": [
             [
                 "ead28dcf07eaec35",
@@ -1037,8 +953,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
-        "y": 140,
+        "x": 250,
+        "y": 120,
         "wires": []
     },
     {
@@ -1054,7 +970,7 @@
         "payloadType": "json",
         "block": false,
         "x": 830,
-        "y": 460,
+        "y": 400,
         "wires": [
             [
                 "a23c49713e5f8582"
@@ -1069,16 +985,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[ \"$\", msg.currpos ]",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "\"vehicles:encounter:\" & msg.currpos.properties.icao24",
+                "to": "\"vehicles:encounter:\" & msg.icao24",
                 "tot": "jsonata"
             }
         ],
@@ -1087,11 +996,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 420,
+        "x": 760,
+        "y": 280,
         "wires": [
             [
-                "0ebf44aceb105c27"
+                "b992be35dfd02872",
+                "e3fa6b11aa6516f2"
             ]
         ]
     },
@@ -1103,11 +1013,11 @@
         "property": "currpos",
         "action": "",
         "pretty": false,
-        "x": 740,
-        "y": 380,
+        "x": 780,
+        "y": 320,
         "wires": [
             [
-                "fc95c8b2ea0e731a"
+                "20bc0234baef838c"
             ]
         ]
     },
@@ -1125,56 +1035,8 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 850,
-        "y": 500,
+        "y": 440,
         "wires": []
-    },
-    {
-        "id": "7b8ecf998db64557",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "wire",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "559b3d8cd1c36063",
-        "type": "switch",
-        "z": "047cb2b68f071355",
-        "name": "wire",
-        "property": "payload.properties",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "hask",
-                "v": "message",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 290,
-        "y": 200,
-        "wires": [
-            [
-                "7b8ecf998db64557"
-            ],
-            [
-                "f1c92d61e05e4423"
-            ]
-        ]
     },
     {
         "id": "4615b814bd302471",
@@ -1188,6 +1050,13 @@
                 "pt": "msg",
                 "to": "payload.properties.emit[\"emit-type\"]",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "icao24",
+                "pt": "msg",
+                "to": "payload.properties.icao24",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -1195,8 +1064,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
-        "y": 180,
+        "x": 460,
+        "y": 80,
         "wires": [
             [
                 "49e2c12da5337aca"
@@ -1219,8 +1088,8 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 860,
-        "y": 180,
+        "x": 680,
+        "y": 80,
         "wires": [
             [
                 "ead6fbcebd0293f8"
@@ -1242,8 +1111,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 320,
+        "x": 1020,
+        "y": 180,
         "wires": []
     },
     {
@@ -1259,8 +1128,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 980,
+        "x": 540,
+        "y": 780,
         "wires": []
     },
     {
@@ -1283,8 +1152,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 450,
-        "y": 200,
+        "x": 270,
+        "y": 80,
         "wires": [
             [
                 "4615b814bd302471"
@@ -1307,8 +1176,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 220,
+        "x": 440,
+        "y": 120,
         "wires": []
     },
     {
@@ -1327,8 +1196,8 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 1040,
-        "y": 160,
+        "x": 860,
+        "y": 60,
         "wires": [
             [
                 "a5cc5476abccc859"
@@ -1340,7 +1209,7 @@
         "type": "debug",
         "z": "047cb2b68f071355",
         "name": "around",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1348,9 +1217,73 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 160,
+        "x": 1020,
+        "y": 60,
         "wires": []
+    },
+    {
+        "id": "b992be35dfd02872",
+        "type": "debug",
+        "z": "047cb2b68f071355",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3b2958fcdb7b68de",
+        "type": "comment",
+        "z": "047cb2b68f071355",
+        "name": "save new vehicle meta",
+        "info": "",
+        "x": 1000,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ac1bf31965dd4698",
+        "type": "comment",
+        "z": "047cb2b68f071355",
+        "name": "save last position",
+        "info": "",
+        "x": 980,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "20bc0234baef838c",
+        "type": "change",
+        "z": "047cb2b68f071355",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[ \"$\", msg.currpos ]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 360,
+        "wires": [
+            [
+                "0ebf44aceb105c27"
+            ]
+        ]
     },
     {
         "id": "acea4a003783391c",
@@ -1398,10 +1331,10 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 40,
+        "y": 140,
         "wires": [
             [
-                "3ce128e96bce2813"
+                "2f5196af07d9517b"
             ]
         ]
     },
@@ -1413,10 +1346,11 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 630,
-        "y": 40,
+        "x": 1010,
+        "y": 140,
         "wires": [
             [
+                "b8b9e6e75ce5f04f",
                 "97f343c3e2bd8d6f"
             ]
         ]
@@ -1428,13 +1362,13 @@
         "server": "9240c7042e038827",
         "command": "JSON.GET",
         "name": "",
-        "topic": "airport:geometries:airport",
+        "topic": "airport:geometries:aerodrome",
         "params": "[]",
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 390,
-        "y": 40,
+        "x": 760,
+        "y": 140,
         "wires": [
             [
                 "0ef9cf1179d2a499"
@@ -1468,8 +1402,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 880,
-        "y": 220,
+        "x": 1300,
+        "y": 280,
         "wires": []
     },
     {
@@ -1483,7 +1417,7 @@
         "obj": true,
         "timeout": 0,
         "x": 140,
-        "y": 320,
+        "y": 500,
         "wires": [
             [
                 "7c20b169e2e1ad9f"
@@ -1494,16 +1428,17 @@
         "id": "1ce897882686d0e1",
         "type": "debug",
         "z": "e51c6bf108b92a29",
-        "name": "debug 7",
+        "name": "zadd result",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 320,
+        "x": 1190,
+        "y": 640,
         "wires": []
     },
     {
@@ -1516,7 +1451,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
+                "to": "{\"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
                 "tot": "jsonata"
             }
         ],
@@ -1525,12 +1460,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 320,
+        "x": 320,
+        "y": 500,
         "wires": [
             [
-                "97f343c3e2bd8d6f",
-                "1ce897882686d0e1"
+                "2715a67425b5ed6a"
             ]
         ]
     },
@@ -1546,10 +1480,10 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 100,
+        "y": 200,
         "wires": [
             [
-                "38004e0c391774a4"
+                "c27c15cdb074c404"
             ]
         ]
     },
@@ -1561,8 +1495,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 630,
-        "y": 100,
+        "x": 1010,
+        "y": 200,
         "wires": [
             [
                 "97f343c3e2bd8d6f"
@@ -1581,8 +1515,8 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 380,
-        "y": 100,
+        "x": 740,
+        "y": 200,
         "wires": [
             [
                 "c40632476643ae7b"
@@ -1601,10 +1535,10 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 160,
+        "y": 260,
         "wires": [
             [
-                "5bb83ebd8a761a83"
+                "aaf5580b5970fe4d"
             ]
         ]
     },
@@ -1616,11 +1550,12 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 630,
-        "y": 160,
+        "x": 1010,
+        "y": 260,
         "wires": [
             [
-                "97f343c3e2bd8d6f"
+                "97f343c3e2bd8d6f",
+                "b8b9e6e75ce5f04f"
             ]
         ]
     },
@@ -1636,8 +1571,8 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 390,
-        "y": 160,
+        "x": 750,
+        "y": 260,
         "wires": [
             [
                 "328b1931cd791272"
@@ -1656,10 +1591,10 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 220,
+        "y": 320,
         "wires": [
             [
-                "310e20d64b11bb2f"
+                "9f95735cacf67f56"
             ]
         ]
     },
@@ -1671,11 +1606,12 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 630,
-        "y": 220,
+        "x": 1010,
+        "y": 320,
         "wires": [
             [
-                "97f343c3e2bd8d6f"
+                "97f343c3e2bd8d6f",
+                "b8b9e6e75ce5f04f"
             ]
         ]
     },
@@ -1691,13 +1627,372 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 390,
-        "y": 220,
+        "x": 750,
+        "y": 320,
         "wires": [
             [
                 "464aacf0d003f8da"
             ]
         ]
+    },
+    {
+        "id": "19297c0646353a3a",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts",
+                "pt": "msg",
+                "to": "payload.properties[\"emit-absolute-time\"]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"type\": \"Feature\",\t    \"properties\": {\t        \"ts\": msg.payload.properties.\"emit-absolute-time\",\t        \"icao24\": msg.payload.properties.icao24\t    },\t    \"geometry\": msg.payload.geometry\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 640,
+        "wires": [
+            [
+                "d056a8cc51d53237"
+            ]
+        ]
+    },
+    {
+        "id": "7cebca3f11c4bded",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "ZADD",
+        "name": "",
+        "topic": "queues:data:heatmap",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 940,
+        "y": 640,
+        "wires": [
+            [
+                "1ce897882686d0e1"
+            ]
+        ]
+    },
+    {
+        "id": "44936f151338df0f",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[msg.ts + 20 * 60, msg.payload]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "7cebca3f11c4bded"
+            ]
+        ]
+    },
+    {
+        "id": "d056a8cc51d53237",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 640,
+        "wires": [
+            [
+                "44936f151338df0f"
+            ]
+        ]
+    },
+    {
+        "id": "11b0cfde95d3dc26",
+        "type": "comment",
+        "z": "e51c6bf108b92a29",
+        "name": "Inject (raw) features into map for debugging",
+        "info": "",
+        "x": 250,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7c36196cde164071",
+        "type": "comment",
+        "z": "e51c6bf108b92a29",
+        "name": "Inject vehicle into map, schedulel its removal from heatmap",
+        "info": "",
+        "x": 300,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d79f468d0c51de79",
+        "type": "redis-in",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "subscribe",
+        "name": "",
+        "topic": "emitpy:delete",
+        "obj": true,
+        "timeout": 0,
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "ab41ae9961b284df"
+            ]
+        ]
+    },
+    {
+        "id": "ab41ae9961b284df",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"delete\": true,\t    \"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8b9e6e75ce5f04f",
+        "type": "subflow:5aa781e7fd97726c",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "x": 1360,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f5196af07d9517b",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "a9ed5848356fb8c3"
+            ]
+        ]
+    },
+    {
+        "id": "a9ed5848356fb8c3",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "3ce128e96bce2813"
+            ]
+        ]
+    },
+    {
+        "id": "1c2db5938b4c316a",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "38004e0c391774a4"
+            ]
+        ]
+    },
+    {
+        "id": "c5401c1655b548e4",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "5bb83ebd8a761a83"
+            ]
+        ]
+    },
+    {
+        "id": "c03cc3cc284bace6",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "310e20d64b11bb2f"
+            ]
+        ]
+    },
+    {
+        "id": "aaf5580b5970fe4d",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "c5401c1655b548e4"
+            ]
+        ]
+    },
+    {
+        "id": "9f95735cacf67f56",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "c03cc3cc284bace6"
+            ]
+        ]
+    },
+    {
+        "id": "c27c15cdb074c404",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "1c2db5938b4c316a"
+            ]
+        ]
+    },
+    {
+        "id": "2715a67425b5ed6a",
+        "type": "worldmap",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "lat": "25.27",
+        "lon": "51.6",
+        "zoom": "14",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1220,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "cdaeb816669b22b6",
@@ -2356,8 +2651,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 300,
-        "y": 120,
+        "x": 460,
+        "y": 180,
         "wires": [
             [
                 "bf18f92ef29de5fe"
@@ -2396,10 +2691,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 120,
+        "y": 180,
         "wires": [
             [
-                "0cf6de293aed4548"
+                "3a8490782b1eb635"
             ]
         ]
     },
@@ -2415,11 +2710,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 670,
-        "y": 120,
+        "x": 810,
+        "y": 180,
         "wires": [
             [
-                "e71fa872c1befb68"
+                "cdafad873607bfa7"
             ]
         ]
     },
@@ -2449,30 +2744,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 120,
+        "x": 650,
+        "y": 180,
         "wires": [
             [
                 "10048dae8db775ba"
             ]
         ]
-    },
-    {
-        "id": "e71fa872c1befb68",
-        "type": "debug",
-        "z": "af63c5f168f03802",
-        "name": "set status",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "bf3f3541d652d31c",
@@ -2486,8 +2764,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 300,
-        "y": 180,
+        "x": 460,
+        "y": 240,
         "wires": [
             [
                 "e6da7a8c4af11d3a"
@@ -2516,10 +2794,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 180,
+        "y": 240,
         "wires": [
             [
-                "bf3f3541d652d31c"
+                "13aacab1afd6e198"
             ]
         ]
     },
@@ -2535,11 +2813,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 670,
-        "y": 180,
+        "x": 810,
+        "y": 240,
         "wires": [
             [
-                "489a40313eb36855"
+                "cdafad873607bfa7"
             ]
         ]
     },
@@ -2569,30 +2847,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 180,
+        "x": 650,
+        "y": 240,
         "wires": [
             [
                 "0c0dc0fcc6e151d5"
             ]
         ]
-    },
-    {
-        "id": "489a40313eb36855",
-        "type": "debug",
-        "z": "af63c5f168f03802",
-        "name": "set status",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "fc7ed709bc322e63",
@@ -2606,8 +2867,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 300,
-        "y": 240,
+        "x": 460,
+        "y": 300,
         "wires": [
             [
                 "764ee53fb118752d"
@@ -2636,10 +2897,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 130,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
-                "fc7ed709bc322e63"
+                "e298b19827804f53"
             ]
         ]
     },
@@ -2655,11 +2916,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 670,
-        "y": 240,
+        "x": 810,
+        "y": 300,
         "wires": [
             [
-                "9f4ca56be595e306"
+                "cdafad873607bfa7"
             ]
         ]
     },
@@ -2689,8 +2950,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 240,
+        "x": 650,
+        "y": 300,
         "wires": [
             [
                 "d2bed6d888f25860"
@@ -2698,36 +2959,19 @@
         ]
     },
     {
-        "id": "9f4ca56be595e306",
-        "type": "debug",
-        "z": "af63c5f168f03802",
-        "name": "set status",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "4ee75939984eaf12",
         "type": "file in",
         "z": "af63c5f168f03802",
         "name": "load file",
-        "filename": "data/airport.geojson",
+        "filename": "data/aerodrome.geojson",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 300,
-        "y": 300,
+        "x": 460,
+        "y": 120,
         "wires": [
             [
                 "f3489aaab7180f10"
@@ -2756,10 +3000,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 300,
+        "y": 120,
         "wires": [
             [
-                "4ee75939984eaf12"
+                "97469380928d4ac2"
             ]
         ]
     },
@@ -2775,11 +3019,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 670,
-        "y": 300,
+        "x": 810,
+        "y": 120,
         "wires": [
             [
-                "af98fc5a61e185f6"
+                "cdafad873607bfa7"
             ]
         ]
     },
@@ -2793,7 +3037,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:airport",
+                "to": "airport:geometries:aerodrome",
                 "tot": "str"
             },
             {
@@ -2809,8 +3053,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 300,
+        "x": 650,
+        "y": 120,
         "wires": [
             [
                 "8c09f7b631431fd0"
@@ -2830,4439 +3074,90 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 1160,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "97469380928d4ac2",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "af63c5f168f03802",
+        "name": "",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "4ee75939984eaf12"
+            ]
+        ]
+    },
+    {
+        "id": "3a8490782b1eb635",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "af63c5f168f03802",
+        "name": "",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "0cf6de293aed4548"
+            ]
+        ]
+    },
+    {
+        "id": "13aacab1afd6e198",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "af63c5f168f03802",
+        "name": "",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "bf3f3541d652d31c"
+            ]
+        ]
+    },
+    {
+        "id": "e298b19827804f53",
+        "type": "subflow:d4a976387a559a5b",
+        "z": "af63c5f168f03802",
+        "name": "",
+        "x": 300,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "7f7a4f9ed924376d",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 100,
         "wires": [
             [
-                "156d2db7093d7558"
+                "fc7ed709bc322e63"
             ]
         ]
     },
     {
-        "id": "01f76c339f4adbd0",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
+        "id": "cdafad873607bfa7",
+        "type": "subflow:5aa781e7fd97726c",
+        "z": "af63c5f168f03802",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "156d2db7093d7558",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "$sum(arr)",
-        "func": "// $sum(array)\n\nconst data = {\n    example: [\n        { value: 4 },\n        { value: 7 },\n        { value: 13 },\n        { value: 10 },\n    ],\n};\n\nmsg.topic = (data.example[0].value + data.example[1].value + data.example[2].value + data.example[3].value);\n\n// Returns the arithmetic sum of an array of numbers\nconst expression = jsonata(\"$sum(example.value)\");\n\nmsg.payload = expression.evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 100,
-        "wires": [
-            [
-                "01f76c339f4adbd0"
-            ]
-        ]
-    },
-    {
-        "id": "081cd34d6d10eff0",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "$max(arr)",
-        "func": "// $max(array)\n\nconst data = {\n    \"example\": {\n        \"value\": [ 4, 7, 13 ],\n    },\n};\n\n// Returns the maximum number in an array of numbers\nconst expression = jsonata(\"$max(example.value)\");\n\nmsg.payload = expression.evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 140,
-        "wires": [
-            [
-                "2f9225a89d7fc482"
-            ]
-        ]
-    },
-    {
-        "id": "199fed429d430789",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 140,
-        "wires": [
-            [
-                "081cd34d6d10eff0"
-            ]
-        ]
-    },
-    {
-        "id": "2f9225a89d7fc482",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "4db6caf373859923",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "$min(arr)",
-        "func": "// $min(array)\n\nconst data = {\n    \"example\": {\n        \"value\": [ 4, 7, 13 ],\n    },\n};\n\n// Returns the minimum number in an array of numbers\nconst expression = jsonata(\"$min(example.value)\");\n\nmsg.payload = expression.evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 180,
-        "wires": [
-            [
-                "b40ecdc26eb65a87"
-            ]
-        ]
-    },
-    {
-        "id": "e484adc4ab3f4dfe",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "$average(arr)",
-        "func": "// $average(array)\n\nconst value = [];\nvalue[0] = 4;\nvalue[1] = 7;\nvalue[2] = 13;\n\nconst data = { \"example\": { value }};\n\n// Returns the mean value of an array of numbers\nconst expression = jsonata(\"$average(example.value)\");\n\nmsg.payload = expression.evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 920,
-        "y": 220,
-        "wires": [
-            [
-                "c542a10e1e9711be"
-            ]
-        ]
-    },
-    {
-        "id": "599ebbfcc3bfb18c",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 180,
-        "wires": [
-            [
-                "4db6caf373859923"
-            ]
-        ]
-    },
-    {
-        "id": "af16cf6a74150575",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 220,
-        "wires": [
-            [
-                "e484adc4ab3f4dfe"
-            ]
-        ]
-    },
-    {
-        "id": "b40ecdc26eb65a87",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c542a10e1e9711be",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "14bc35a7e871612e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "a30467908fac9463",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$number(arg)",
-        "func": "// $number(argument)\n// Argument can be string or boolean\n\nconst example = [];\nexample[0] = true;\nexample[1] = false;\nexample[2] = \"2\";\n\n// Casts the arg parameter to a number\nconst expression = [];\nexpression[0] = jsonata(`$number(${example[0]})`);\nexpression[1] = jsonata(`$number(${example[1]})`);\nexpression[2] = jsonata(`$number(${example[2]})`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 980,
-        "wires": [
-            [
-                "fc277a1902454d3c"
-            ]
-        ]
-    },
-    {
-        "id": "fc277a1902454d3c",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "7224275fee07915e",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$abs(num)",
-        "func": "// $abs(number)\n\nconst example = [];\nexample[0] = 2;\nexample[1] = -3;\n\n// Returns the absolute value of the number\nconst expression = [];\nexpression[0] = jsonata(`$abs(${example[0]})`);\nexpression[1] = jsonata(`$abs(${example[1]})`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 1020,
-        "wires": [
-            [
-                "02cf895c04cc2d17"
-            ]
-        ]
-    },
-    {
-        "id": "f6c9478912e95bc4",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 980,
-        "wires": [
-            [
-                "a30467908fac9463"
-            ]
-        ]
-    },
-    {
-        "id": "48b06fdef4c9ffc7",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1020,
-        "wires": [
-            [
-                "7224275fee07915e"
-            ]
-        ]
-    },
-    {
-        "id": "02cf895c04cc2d17",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "8cd41f907d7b91e1",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$floor(num)",
-        "func": "// $floor(number)\n\nconst example = [];\nexample[0] = 4;\nexample[1] = 4.4;\nexample[2] = 4.8;\nexample[3] = -4.4;\n\n// Returns the value of number rounded down to the nearest integer\nconst expression = [];\nexpression[0] = jsonata(`$floor(${example[0]})`);\nexpression[1] = jsonata(`$floor(${example[1]})`);\nexpression[2] = jsonata(`$floor(${example[2]})`);\nexpression[3] = jsonata(`$floor(${example[3]})`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 1060,
-        "wires": [
-            [
-                "b784ce33202f9e4a"
-            ]
-        ]
-    },
-    {
-        "id": "5d35112b0d7ffeb0",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$ceil(num)",
-        "func": "// $ceil(number)\n\nconst example = [];\nexample[0] = 4;\nexample[1] = 4.4;\nexample[2] = 4.8;\nexample[3] = -4.4;\n\n// Returns the value of number rounded up to the nearest integer\nconst expression = [];\nexpression[0] = jsonata(`$ceil(${example[0]})`);\nexpression[1] = jsonata(`$ceil(${example[1]})`);\nexpression[2] = jsonata(`$ceil(${example[2]})`);\nexpression[3] = jsonata(`$ceil(${example[3]})`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 1100,
-        "wires": [
-            [
-                "1af0b15b623b4243"
-            ]
-        ]
-    },
-    {
-        "id": "35d492f50182f0e9",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$round(num, pre)",
-        "func": "// $round(num [, precision])\n\nconst example = [];\nexample[0] = 3.14159265;\nexample[1] = 425;\n\n// Returns the value of the number parameter\n// rounded to decimal places specified by optional precision parameter\nconst expression = [];\nexpression[0] = jsonata(`$round(${example[0]})`);\nexpression[1] = jsonata(`$round(${example[0]},2)`);\nexpression[2] = jsonata(`$round(${example[1]},-1)`);\nexpression[3] = jsonata(`$round(${example[1]},-2)`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 1140,
-        "wires": [
-            [
-                "2b8feafd3ebed3db"
-            ]
-        ]
-    },
-    {
-        "id": "1b8e6db00e94f577",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1060,
-        "wires": [
-            [
-                "8cd41f907d7b91e1"
-            ]
-        ]
-    },
-    {
-        "id": "50ee5beef4616939",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1100,
-        "wires": [
-            [
-                "5d35112b0d7ffeb0"
-            ]
-        ]
-    },
-    {
-        "id": "cb3905a7fc7807dc",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1140,
-        "wires": [
-            [
-                "35d492f50182f0e9"
-            ]
-        ]
-    },
-    {
-        "id": "b784ce33202f9e4a",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "2b8feafd3ebed3db",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "1af0b15b623b4243",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "5f58f7b332bc5032",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$power(base , exp)",
-        "func": "// $power(base , exponent)\n\nconst example = 5;\n\n// Returns the value of base raised to the power of exponent\nconst expression = [];\nexpression[0] = jsonata(`$power(${example}, 0)`);\nexpression[1] = jsonata(`$power(${example}, 1)`);\nexpression[2] = jsonata(`$power(${example}, 2)`);\nexpression[3] = jsonata(`$power(${example}, -1)`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 1180,
-        "wires": [
-            [
-                "27784537ed674d95"
-            ]
-        ]
-    },
-    {
-        "id": "6a2a296d28e805e8",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1180,
-        "wires": [
-            [
-                "5f58f7b332bc5032"
-            ]
-        ]
-    },
-    {
-        "id": "27784537ed674d95",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "46d1ce782ac05500",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$sqrt(num)",
-        "func": "const example = [];\nexample[0] = 16;\nexample[1] = 25;\n\n// Returns the square root of the value of the number\nconst expression = [];\nexpression[0] = jsonata(`$sqrt(${example[0]})`);\nexpression[1] = jsonata(`$sqrt(${example[1]})`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 1220,
-        "wires": [
-            [
-                "f5a7b9ba44d6da4f"
-            ]
-        ]
-    },
-    {
-        "id": "a1007695caca77de",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1220,
-        "wires": [
-            [
-                "46d1ce782ac05500"
-            ]
-        ]
-    },
-    {
-        "id": "f5a7b9ba44d6da4f",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "f0854f7725cd1e0a",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$random()",
-        "func": "// $random()\n\n// Returns a pseudo random number (0 ≤ n < 1)\nconst expression = jsonata(\"$random()\");\n\nmsg.payload = [];\nmsg.payload[0] = expression.evaluate();\nmsg.payload[1] = jsonata(\"$random()\").evaluate();\nmsg.payload[2] = jsonata(`$round(${msg.payload[1]}, 2)`).evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 1260,
-        "wires": [
-            [
-                "fcea2e9a5a9a9a31"
-            ]
-        ]
-    },
-    {
-        "id": "7cd53419b0c387ef",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1260,
-        "wires": [
-            [
-                "f0854f7725cd1e0a"
-            ]
-        ]
-    },
-    {
-        "id": "fcea2e9a5a9a9a31",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "0e87c5fd5d165065",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$formatNumber(num, pic)",
-        "func": "// $formatNumber(num, picture [, options])\n\nconst example = [];\nexample[0] = 3.14159265;\nexample[1] = 1234.5678;\n\n// Casts the number to a string and formats it to a decimal representation \n// as specified by the picture string\nconst expression = [];\nexpression[0] = jsonata(`$formatNumber(${example[0]}, \"#.#\")`);\nexpression[1] = jsonata(`$formatNumber(${example[0]}, \"#.00\")`);\nexpression[2] = jsonata(`$formatNumber(${example[1]}, \"#,###.##\")`);\nexpression[3] = jsonata(`$formatNumber(${example[1]}, \"0,000.00%\")`);\nexpression[4] = jsonata(`$formatNumber(${example[1]}, \"#,###.####pm\")`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\nmsg.payload[4] = expression[4].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
-        "y": 1300,
-        "wires": [
-            [
-                "cc2aa57778a71052"
-            ]
-        ]
-    },
-    {
-        "id": "a58db5b349b23760",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1300,
-        "wires": [
-            [
-                "0e87c5fd5d165065"
-            ]
-        ]
-    },
-    {
-        "id": "cc2aa57778a71052",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "d225d4b187f80ae9",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$formatBase(num, rad)",
-        "func": "// $formatBase(num, radix)\n// If radix is not specified, then it defaults to base 10\n// radix can be between 2 and 36\n\nconst example = [];\nexample[0] = 10;\nexample[1] = 15;\n\n// Casts the number to a string and formats it to an integer\n// represented in the number base specified by the radix\nconst expression = [];\nexpression[0] = jsonata(`$formatBase(${example[0]})`);\nexpression[1] = jsonata(`$formatBase(${example[0]}, 2)`);\nexpression[2] = jsonata(`$formatBase(${example[0]}, 16)`);\nexpression[3] = jsonata(`$formatBase(${example[1]}, 2)`);\nexpression[4] = jsonata(`$formatBase(${example[1]}, 16)`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\nmsg.payload[4] = expression[4].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
-        "y": 1340,
-        "wires": [
-            [
-                "da137d0fda54aa1d"
-            ]
-        ]
-    },
-    {
-        "id": "cd2f7b9ece57ec42",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1340,
-        "wires": [
-            [
-                "d225d4b187f80ae9"
-            ]
-        ]
-    },
-    {
-        "id": "da137d0fda54aa1d",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "bcc10f8b59b05223",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$formatInteger(num, pic)",
-        "func": "// $formatInteger(num, picture)\n\nconst example = [];\nexample[0] = 12;\nexample[1] = 115;\n\n// Casts the number to a string, formats it to an integer representation as specified by the picture\nconst expression = [];\nexpression[0] = jsonata(`$formatInteger(${example[0]}, \"w\")`);\nexpression[1] = jsonata(`$formatInteger(${example[0]}, \"I\")`);\nexpression[2] = jsonata(`$formatInteger(${example[1]}, \"w\")`);\nexpression[3] = jsonata(`$formatInteger(${example[1]}, \"I\")`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
-        "y": 1380,
-        "wires": [
-            [
-                "68faa6604649be08"
-            ]
-        ]
-    },
-    {
-        "id": "4aa9214f104589e5",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1380,
-        "wires": [
-            [
-                "bcc10f8b59b05223"
-            ]
-        ]
-    },
-    {
-        "id": "68faa6604649be08",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "c879b13b62b7e9e9",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "$parseInteger(str, pic)",
-        "func": "// $parseInteger(string, picture)\n\nconst example = [];\nexample[0] = \"five\";\nexample[1] = \"two thousand, one hundred and fifteen\";\nexample[2] = \"123,456,789\";\nexample[3] = \"VIII\";\n\n// Parses the contents of the string parameter to an integer\n// using the format specified by the picture\nconst expression = [];\nexpression[0] = jsonata(`$parseInteger(\"${example[0]}\", \"w\")`);\nexpression[1] = jsonata(`$parseInteger(\"${example[1]}\", \"w\")`);\nexpression[2] = jsonata(`$parseInteger(\"${example[2]}\", \"#,###,##0\")`);\nexpression[3] = jsonata(`$parseInteger(\"${example[3]}\", \"I\")`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 320,
-        "y": 1420,
-        "wires": [
-            [
-                "e224ce9d130829a1"
-            ]
-        ]
-    },
-    {
-        "id": "46054494447c8ae2",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1420,
-        "wires": [
-            [
-                "c879b13b62b7e9e9"
-            ]
-        ]
-    },
-    {
-        "id": "e224ce9d130829a1",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "bd78a6345689686e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "3cc6261891386b5f",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 80,
-        "wires": [
-            [
-                "b5288005cfaed881"
-            ]
-        ]
-    },
-    {
-        "id": "8e042b0206d96ec3",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "b5288005cfaed881",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$string(arg, pre)",
-        "func": "// $string(arg, prettify)\n// Argument can be boolean, number, array, null\n// Prettify is boolean, if true, then \"prettified\" JSON is produced\n\nconst example = [];\nexample[0] = true;\nexample[1] = [ 1, \"'false'\", false ];\nexample[2] = null;\nexample[3] = new Date();\nconst data = {\n    example: {\n        test: {\n            pos1: \"success\",\n            pos2: \"failure\",\n        },\n    },\n};\n\n// Casts the arg parameter to a string\nconst expression = [];\nexpression[0] = jsonata(`$string(\"${example[0]}\")`);\nexpression[1] = jsonata(`$string(\"${example[1]}\")`);\nexpression[2] = jsonata(`$string(\"${example[2]}\")`);\nexpression[3] = jsonata(`$string(\"${example[3]}\")`);\nexpression[4] = jsonata(\"$string(example)\");\nexpression[5] = jsonata(\"$string(example, true)\");\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\nmsg.payload[4] = expression[4].evaluate(data);\nmsg.payload[5] = expression[5].evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 80,
-        "wires": [
-            [
-                "8e042b0206d96ec3"
-            ]
-        ]
-    },
-    {
-        "id": "c4e236b5f403ca46",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 120,
-        "wires": [
-            [
-                "97198c59935dad84"
-            ]
-        ]
-    },
-    {
-        "id": "139d3d075aef541b",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "97198c59935dad84",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$length(str)",
-        "func": "// $length(string)\n\nconst example = [];\nexample[0] = \"hello world\";\nexample[1] = [\"test array\"];\nexample[2] = false;\nexample[3] = null;\n\n// Returns the number of characters in the string\nconst expression = [];\nexpression[0] = jsonata(`$length(\"${example[0]}\")`);\nexpression[1] = jsonata(`$length(\"${example[1]}\")`);\nexpression[2] = jsonata(`$length(\"${example[2]}\")`);\nexpression[3] = jsonata(`$length(\"${example[3]}\")`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 290,
-        "y": 120,
-        "wires": [
-            [
-                "139d3d075aef541b"
-            ]
-        ]
-    },
-    {
-        "id": "4d7f61e7faedcb5a",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$substring(str ,sta, len)",
-        "func": "// $substring(string, start[, length])\n\nconst example = [ \"hello world\", \"goodbye friend\" ];\n\n// Returns a string containing the characters from start\n// If length is specified, then the substring will be equal to the length in characters\n// If start is negative then it indicates the number of characters from the end\nconst expression = [];\nexpression[0] = jsonata(`$substring(\"${example[0]}\", 2)`);\nexpression[1] = jsonata(`$substring(\"${example[0]}\", 3, 5)`);\nexpression[2] = jsonata(`$substring(\"${example[0]}\", -5)`);\nexpression[3] = jsonata(`$substring(\"${example[0]}\", -5, 3)`);\nexpression[5] = jsonata(`$substring(\"${example[1]}\", 4, 3)`);\nexpression[4] = jsonata(`$substring(\"${example[1]}\", -10, 3)`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\nmsg.payload[4] = expression[4].evaluate();\nmsg.payload[5] = expression[5].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 320,
-        "y": 160,
-        "wires": [
-            [
-                "66744dce571a09f0"
-            ]
-        ]
-    },
-    {
-        "id": "e48f9f8fb961a5d6",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "4d7f61e7faedcb5a"
-            ]
-        ]
-    },
-    {
-        "id": "66744dce571a09f0",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "1cc1025e35c9a45f",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$substringBefore(str ,cha)",
-        "func": "// $substringBefore(string, characters)\n\nconst example = [];\nexample[0] = `hello \nworld`;\n\n// Returns the substring before the first occurrence of the character sequence\nconst expression = [];\nexpression[0] = jsonata(`$substringBefore(\"${example[0]}\", \" \")`);\nexpression[1] = jsonata(`$substringBefore(\"${example[0]}\", \"l\")`);\nexpression[2] = jsonata(`$substringBefore(\"${example[0]}\", \"o\")`);\nexpression[3] = jsonata(`$substringBefore(\"${example[0]}\", \"r\")`);\nexpression[4] = jsonata(`$substringBefore(\"${example[0]}\", \"\\n\")`);\n\nmsg.payload = [];\nmsg.payload[0] = expression[0].evaluate();\nmsg.payload[1] = expression[1].evaluate();\nmsg.payload[2] = expression[2].evaluate();\nmsg.payload[3] = expression[3].evaluate();\nmsg.payload[4] = expression[4].evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
+        "x": 1000,
         "y": 200,
         "wires": [
             [
-                "f30e4fadc037c830"
+                "af98fc5a61e185f6"
             ]
         ]
     },
     {
-        "id": "0778494e0323db2d",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 200,
-        "wires": [
-            [
-                "1cc1025e35c9a45f"
-            ]
-        ]
-    },
-    {
-        "id": "f30e4fadc037c830",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "3079704ac5de15ab",
+        "id": "bc8231b7f5656897",
         "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$substringAfter(str ,cha)",
-        "func": "// $substringAfter(string, characters)\n\nconst example = [`hello \nworld`];\n\n// Returns the substring after the first occurrence of the character sequence\nconst expression = [\n    jsonata(`$substringAfter(\"${example[0]}\", \" \")`),\n    jsonata(`$substringAfter(\"${example[0]}\", \"l\")`),\n    jsonata(`$substringAfter(\"${example[0]}\", \"o\")`),\n    jsonata(`$substringAfter(\"${example[0]}\", \"r\")`),\n    jsonata(`$substringAfter(\"${example[0]}\", \"\\n\")`),\n];\n\nmsg.payload = [\n    expression[0].evaluate(),\n    expression[1].evaluate(),\n    expression[2].evaluate(),\n    expression[3].evaluate(),\n    expression[4].evaluate(),\n];\n\nreturn msg;",
+        "z": "af63c5f168f03802",
+        "name": "style",
+        "func": "msg.payload.features.forEach((f) => {\n    let style = {}\n    const parts = [\"stroke\", \"stroke-width\", \"stoke-opacity\", \"fill-color\", \"fill-opacity\"]\n    parts.forEach((prop) => {\n        if (f.properties.hasOwnProperty(prop)) {\n            style[prop] = f.properties[prop];\n        }\n    });\n    f.style = style\n})\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
-        "y": 240,
-        "wires": [
-            [
-                "8a34220c1cf0ddf2"
-            ]
-        ]
-    },
-    {
-        "id": "8a34220c1cf0ddf2",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "721d1f7a9c3c34ad",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 240,
-        "wires": [
-            [
-                "3079704ac5de15ab"
-            ]
-        ]
-    },
-    {
-        "id": "ac702313720942fd",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$uppercase(str)",
-        "func": "// $uppercase(string)\n\nconst example = \"Hello World\";\n\n// Returns a string with all the characters converted to uppercase\nconst expression = jsonata(`$uppercase(\"${example}\")`);\n\nmsg.payload = expression.evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 280,
-        "wires": [
-            [
-                "5358376cf87433d3"
-            ]
-        ]
-    },
-    {
-        "id": "20a8bff4c82dc0a6",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 280,
-        "wires": [
-            [
-                "ac702313720942fd"
-            ]
-        ]
-    },
-    {
-        "id": "5358376cf87433d3",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "fd1ca4d65201e56e",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$lowercase(str)",
-        "func": "// $lowercase(string)\n\nconst example = \"Hello World\";\n\n// Returns a string with all the characters converted to lowercase\nconst expression = jsonata(`$lowercase(\"${example}\")`);\n\nmsg.payload = expression.evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 320,
-        "wires": [
-            [
-                "bc6a61999fd08781"
-            ]
-        ]
-    },
-    {
-        "id": "1597936a4dd07adc",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 320,
-        "wires": [
-            [
-                "fd1ca4d65201e56e"
-            ]
-        ]
-    },
-    {
-        "id": "bc6a61999fd08781",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "bc6b032b788377d5",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$trim(str)",
-        "func": "// $trim(string)\n\nconst example = `Hello\nWorld\n`;\n\n// Normalizes and trims all whitespace characters in string\n// All tabs, carriage returns, and line feeds are replaced with spaces.\n// Contiguous sequences of spaces are reduced to a single space.\n// Trailing and leading spaces are removed\nconst expression = jsonata(`$trim(\"${example}\")`);\n\nmsg.payload = expression.evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 280,
-        "y": 360,
-        "wires": [
-            [
-                "f0028c6d46f58225"
-            ]
-        ]
-    },
-    {
-        "id": "1c0fdc0f44e2d65d",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 360,
-        "wires": [
-            [
-                "bc6b032b788377d5"
-            ]
-        ]
-    },
-    {
-        "id": "f0028c6d46f58225",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "634bff34b4bfa755",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$pad(str, wid, cha)",
-        "func": "// $pad(string, width [, character])\n\nconst data = {\n    example: \"Hello\",\n    char: \"X\",\n    width: -7,\n};\n\n// Returns a copy of the string str with extra padding\n// It's total number of characters is at least the absolute value of the width\n// If width is a positive number, then the string is padded to the right\n// If negative, it is padded to the left\n// char argument specifies the padding character, default is space\nconst expression = [\n    jsonata(\"$pad(example, 7)\"),\n    jsonata(\"$pad(example, -7)\"),\n    jsonata(\"$pad(example, 7, '#')\"),\n    jsonata(\"$pad(example, width, char)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n    expression[3].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 400,
-        "wires": [
-            [
-                "aaf9bfbca7e66685"
-            ]
-        ]
-    },
-    {
-        "id": "471d0565d8107992",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 400,
-        "wires": [
-            [
-                "634bff34b4bfa755"
-            ]
-        ]
-    },
-    {
-        "id": "aaf9bfbca7e66685",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "1422679d35d613e6",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$contains(str, pat)",
-        "func": "// $contains(string, pattern)\n// pattern can be a string or a regular expression (regex)\n\nconst example = \"Hello World\";\nconst regex = [ /wo/, /wo/i ];\n\n// Returns true if str is matched by pattern, otherwise it returns false\nconst expression = [\n    jsonata(`$contains(\"${example}\", \"orl\")`),\n    jsonata(`$contains(\"${example}\", \"goodbye\")`),\n    jsonata(`$contains(\"${example}\", ${regex[0]})`),\n    jsonata(`$contains(\"${example}\", ${regex[1]})`),\n];\n\nmsg.payload = [\n    expression[0].evaluate(),\n    expression[1].evaluate(),\n    expression[2].evaluate(),\n    expression[3].evaluate(),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 440,
-        "wires": [
-            [
-                "12bf1c0706c42cd9"
-            ]
-        ]
-    },
-    {
-        "id": "15f7d0253372dacc",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$split(str, sep, lim)",
-        "func": "// $split(string, separator [, limit])\n// Separator parameter can either be a string or a regular expression (regex)\n// Limit parameter is a number that specifies the maximum of substrings to include in the result\n\nconst example = \"Hello World\";\nconst regex = /l/;\n\n// Splits the str parameter into an array of substrings by the separator parameter\nconst expression = [\n    jsonata(`$split(\"${example}\", \" \")`),\n    jsonata(`$split(\"${example}\", \"l\")`),\n    jsonata(`$split(\"${example}\", \"l\", 2)`),\n    jsonata(`$split(\"${example}\", ${regex})`),\n    jsonata(`$split(\"${example}\", ${regex}, 3)`),\n];\n\nmsg.payload = [\n    expression[0].evaluate(),\n    expression[1].evaluate(),\n    expression[2].evaluate(),\n    expression[3].evaluate(),\n    expression[4].evaluate(),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 480,
-        "wires": [
-            [
-                "382e989d6beed2b9"
-            ]
-        ]
-    },
-    {
-        "id": "3578911993d1359b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 440,
-        "wires": [
-            [
-                "1422679d35d613e6"
-            ]
-        ]
-    },
-    {
-        "id": "0ad7bc5dbbb01e64",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 480,
-        "wires": [
-            [
-                "15f7d0253372dacc"
-            ]
-        ]
-    },
-    {
-        "id": "12bf1c0706c42cd9",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "382e989d6beed2b9",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "6032d7a86bd608af",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$join(arr, sep)",
-        "func": "// $join(array[, separator])\n\nconst data = {\n    example: [ \"Hello\", \"World\", \"Goodbye\", \"Moon\" ],\n};\n\n// Joins an array of component strings into a single concatenated string\nconst expression = [\n    jsonata(\"$join(example)\"),\n    jsonata(\"$join(example, '-')\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
+        "libs": [],
+        "x": 90,
         "y": 520,
         "wires": [
-            [
-                "ceaf6f20ba283064"
-            ]
+            []
         ]
-    },
-    {
-        "id": "9e39dce96c0e40ba",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 520,
-        "wires": [
-            [
-                "6032d7a86bd608af"
-            ]
-        ]
-    },
-    {
-        "id": "ceaf6f20ba283064",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "6a216142b72c7570",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$match(str, pat, lim)",
-        "func": "// $match(str, pattern [, limit])\n\nlet data = {\n    example: \"ababbabbcc\",\n};\n\n// Applies the string to the pattern regular expression and returns an array of objects\nconst expression = [\n    jsonata(\"$match(example, /a(b+)/)\"),\n    jsonata(\"$match(example, /a(b+)/, 1)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 310,
-        "y": 560,
-        "wires": [
-            [
-                "a634125d8a135739"
-            ]
-        ]
-    },
-    {
-        "id": "b191f4f849f6932b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 560,
-        "wires": [
-            [
-                "6a216142b72c7570"
-            ]
-        ]
-    },
-    {
-        "id": "a634125d8a135739",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "03ae99be7404fdd5",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$replace(str, pat, rep, lim)",
-        "func": "// $replace(string, pattern, replacement [, limit])\n// Pattern parameter can either be a string or a regular expression (regex)\n\nconst example = \"Hello world\";\nconst example2 = \"Billy Bob\";\nconst regex = /(\\w+)\\s(\\w+)/;\n\n// Finds occurrences of pattern within string and replaces them with replacement\nconst expression = [\n    jsonata(`$replace(\"${example}\", \"Hello\", \"Goodbye cruel\")`),\n    jsonata(`$replace(\"${example2}\", ${regex}, \"$2, $1\")`),\n];\n\nmsg.payload = [\n    expression[0].evaluate(),\n    expression[1].evaluate(),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 330,
-        "y": 600,
-        "wires": [
-            [
-                "72ab71f8ff083acd"
-            ]
-        ]
-    },
-    {
-        "id": "ed05c5a681fd1709",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            [
-                "03ae99be7404fdd5"
-            ]
-        ]
-    },
-    {
-        "id": "72ab71f8ff083acd",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "f6824991eb4a71e6",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$eval(exp, con)",
-        "func": "// $eval(expression [, context])\n// Expression parameter must be a string\n\nconst data = {\n    example: [ 4, 5, 6 ],\n};\n\n// Parses and evaluates expression which contains literal JSON\n// or a JSONata expression using the current context as the context for evaluation.\nconst expression = [\n    jsonata(\"$eval('[1,2,3]')\"),\n    jsonata(\"$eval('example')\"),\n    jsonata(\"$eval('[$string(7),$string(8),$string(9)]')\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(),\n    expression[1].evaluate(data),\n    expression[2].evaluate(),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 640,
-        "wires": [
-            [
-                "280344adbf650555"
-            ]
-        ]
-    },
-    {
-        "id": "7256b2d99c71abb2",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 640,
-        "wires": [
-            [
-                "f6824991eb4a71e6"
-            ]
-        ]
-    },
-    {
-        "id": "280344adbf650555",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "ed2e6980f986b9ae",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$base64encode(str)",
-        "func": "// $base64encode(string)\n\nconst data = {\n    example: [\n    \"Hello world\",\n    \"This is my secret phrase.\",\n    \"{theKey: 'This is a JSON string example'};\",\n    ],\n};\n\n// Converts an ASCII string to a base 64 representation\nconst expression = [\n    jsonata(\"$base64encode(example[0])\"),\n    jsonata(\"$base64encode(example[1])\"),\n    jsonata(\"$base64encode(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 320,
-        "y": 680,
-        "wires": [
-            [
-                "fee84a10519aa421"
-            ]
-        ]
-    },
-    {
-        "id": "8ac685159923c118",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 680,
-        "wires": [
-            [
-                "ed2e6980f986b9ae"
-            ]
-        ]
-    },
-    {
-        "id": "fee84a10519aa421",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "14a8c5089653d59f",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$base64decode(str)",
-        "func": "// $base64decode(string)\n\nconst data = {\n    example: [\n    \"SGVsbG8gd29ybGQ=\",\n    \"VGhpcyBpcyBteSBzZWNyZXQgcGhyYXNlLg==\",\n    \"e3RoZUtleTogJ1RoaXMgaXMgYSBKU09OIHN0cmluZyBleGFtcGxlJ307\",\n    ],\n};\n\n// Converts base 64 encoded bytes to a string, using a UTF-8 Unicode codepage\nconst expression = [\n    jsonata(\"$base64decode(example[0])\"),\n    jsonata(\"$base64decode(example[1])\"),\n    jsonata(\"$base64decode(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 320,
-        "y": 720,
-        "wires": [
-            [
-                "37889b302715c27e"
-            ]
-        ]
-    },
-    {
-        "id": "58147d798906386f",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 720,
-        "wires": [
-            [
-                "14a8c5089653d59f"
-            ]
-        ]
-    },
-    {
-        "id": "37889b302715c27e",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "6f8cef3d757675b7",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$encodeUrlComponent(str)",
-        "func": "// $encodeUrlComponent(string)\n\nconst data = {\n    example: [\n    \"https://www.youtube.com/watch?v=ksGeUD26Mw0\",\n    \"?v=ksGeUD26Mw0\",\n    \"{theKey: 'This is a JSON string example'};\",\n    ],\n};\n\n// Encodes URL component by replacing certain characters with the UTF-8 encoding of the character using escape sequences\nconst expression = [\n    jsonata(\"$encodeUrlComponent(example[0])\"),\n    jsonata(\"$encodeUrlComponent(example[1])\"),\n    jsonata(\"$encodeUrlComponent(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 340,
-        "y": 760,
-        "wires": [
-            [
-                "aea93a05d365da9c"
-            ]
-        ]
-    },
-    {
-        "id": "98056fd4c8ea54b0",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$encodeUrl(str)",
-        "func": "// $encodeUrl(string)\n\nconst data = {\n    example: [\n    \"Hello world\",\n    \"https://nodered.org/docs/ & not a real url \",\n    \"{theKey: 'This is a JSON string example'};\",\n    ],\n};\n\n// Encodes URL by replacing certain characters with the UTF-8 encoding of the character using escape sequences\nconst expression = [\n    jsonata(\"$encodeUrl(example[0])\"),\n    jsonata(\"$encodeUrl(example[1])\"),\n    jsonata(\"$encodeUrl(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 840,
-        "wires": [
-            [
-                "251698b309d07a7e"
-            ]
-        ]
-    },
-    {
-        "id": "265d1b2dc6aae07a",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 760,
-        "wires": [
-            [
-                "6f8cef3d757675b7"
-            ]
-        ]
-    },
-    {
-        "id": "fdccd987154c9d12",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 840,
-        "wires": [
-            [
-                "98056fd4c8ea54b0"
-            ]
-        ]
-    },
-    {
-        "id": "aea93a05d365da9c",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "251698b309d07a7e",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "faad7e5e44d62653",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$decodeUrlComponent(str)",
-        "func": "// $decodeUrlComponent(string)\n\nconst data = {\n    example: [\n    \"https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DksGeUD26Mw0\",\n    \"%3Fv%3DksGeUD26Mw0\",\n    \"%7BtheKey%3A%20'This%20is%20a%20JSON%20string%20example'%7D%3B\",\n    ],\n};\n\n// Decodes a URL component previously created by encodeUrlComponent\nconst expression = [\n    jsonata(\"$decodeUrlComponent(example[0])\"),\n    jsonata(\"$decodeUrlComponent(example[1])\"),\n    jsonata(\"$decodeUrlComponent(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 340,
-        "y": 800,
-        "wires": [
-            [
-                "e8d3957524002c5b"
-            ]
-        ]
-    },
-    {
-        "id": "d13dbe29814dadd4",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 800,
-        "wires": [
-            [
-                "faad7e5e44d62653"
-            ]
-        ]
-    },
-    {
-        "id": "e8d3957524002c5b",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "85f562c1f72f7317",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "$decodeUrl(str)",
-        "func": "// $decodeUrl(string)\n\nconst data = {\n    example: [\n    \"Hello%20world\",\n    \"https://nodered.org/docs/%20&%20not%20a%20real%20url%20\",\n    \"%7BtheKey:%20'This%20is%20a%20JSON%20string%20example'%7D;\",\n    ],\n};\n\n// Decodes a URL previously created by encodeUrl\nconst expression = [\n    jsonata(\"$decodeUrl(example[0])\"),\n    jsonata(\"$decodeUrl(example[1])\"),\n    jsonata(\"$decodeUrl(example[2])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 300,
-        "y": 880,
-        "wires": [
-            [
-                "78900f26fea3faf7"
-            ]
-        ]
-    },
-    {
-        "id": "2587c0a4b7cf100b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 880,
-        "wires": [
-            [
-                "85f562c1f72f7317"
-            ]
-        ]
-    },
-    {
-        "id": "78900f26fea3faf7",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "ef756230b8be8f60",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "e349d1491539c726",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "$boolean(arg)",
-        "func": "// $boolean(arg)\n\n/*\nArgument type\t    Result\nBoolean\t            unchanged\nstring: empty\t    false\nstring: non-empty\ttrue\nnumber: 0\t        false\nnumber: non-zero\ttrue\nnull\t            false\narray: empty\t    false\narray: any true\t    true\narray: all false\tfalse\nobject: empty\t    false\nobject: non-empty\ttrue\nfunction\t        false\n*/\n\nconst data = {\n    example: [\n    true,\n    false,\n    \"\",\n    \"Hello world\",\n    0,\n    1,\n    null,\n    [],\n    [ false, true ],\n    [false],\n    {},\n    { \"non\": \"empty\" },\n    function test() { return; },\n    ],\n};\n\n// Casts the argument to a Boolean\nconst expression = [\n    jsonata(\"$boolean(example[0])\"),\n    jsonata(\"$boolean(example[1])\"),\n    jsonata(\"$boolean(example[2])\"),\n    jsonata(\"$boolean(example[3])\"),\n    jsonata(\"$boolean(example[4])\"),\n    jsonata(\"$boolean(example[5])\"),\n    jsonata(\"$boolean(example[6])\"),\n    jsonata(\"$boolean(example[7])\"),\n    jsonata(\"$boolean(example[8])\"),\n    jsonata(\"$boolean(example[9])\"),\n    jsonata(\"$boolean(example[10])\"),\n    jsonata(\"$boolean(example[11])\"),\n    jsonata(\"$boolean(example[12])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n    expression[3].evaluate(data),\n    expression[4].evaluate(data),\n    expression[5].evaluate(data),\n    expression[6].evaluate(data),\n    expression[7].evaluate(data),\n    expression[8].evaluate(data),\n    expression[9].evaluate(data),\n    expression[10].evaluate(data),\n    expression[11].evaluate(data),\n    expression[12].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 920,
-        "y": 320,
-        "wires": [
-            [
-                "6bc8446341b4b5f2"
-            ]
-        ]
-    },
-    {
-        "id": "4253c825027547ad",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 320,
-        "wires": [
-            [
-                "e349d1491539c726"
-            ]
-        ]
-    },
-    {
-        "id": "6bc8446341b4b5f2",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "1725374f271e4efc",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "$not(arg)",
-        "func": "// $not(arg)\n\n/*\nArgument type\t    Result\nBoolean\t            opposite\nstring: empty\t    true\nstring: non-empty\tfalse\nnumber: 0\t        true\nnumber: non-zero\tfalse\nnull\t            true\narray: empty\t    true\narray: any true\t    false\narray: all false\ttrue\nobject: empty\t    true\nobject: non-empty\tfalse\nfunction\t        true\n*/\n\nconst data = {\n    example: [\n    true,\n    false,\n    \"\",\n    \"Hello world\",\n    0,\n    1,\n    null,\n    [],\n    [ false, true ],\n    [false],\n    {},\n    { \"non\": \"empty\" },\n    function test() { return; },\n    ],\n};\n\n// Returns Boolean NOT on the argument, the revese of $boolean()\nconst expression = [\n    jsonata(\"$not(example[0])\"),\n    jsonata(\"$not(example[1])\"),\n    jsonata(\"$not(example[2])\"),\n    jsonata(\"$not(example[3])\"),\n    jsonata(\"$not(example[4])\"),\n    jsonata(\"$not(example[5])\"),\n    jsonata(\"$not(example[6])\"),\n    jsonata(\"$not(example[7])\"),\n    jsonata(\"$not(example[8])\"),\n    jsonata(\"$not(example[9])\"),\n    jsonata(\"$not(example[10])\"),\n    jsonata(\"$not(example[11])\"),\n    jsonata(\"$not(example[12])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n    expression[3].evaluate(data),\n    expression[4].evaluate(data),\n    expression[5].evaluate(data),\n    expression[6].evaluate(data),\n    expression[7].evaluate(data),\n    expression[8].evaluate(data),\n    expression[9].evaluate(data),\n    expression[10].evaluate(data),\n    expression[11].evaluate(data),\n    expression[12].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 360,
-        "wires": [
-            [
-                "377b870d6377fa6a"
-            ]
-        ]
-    },
-    {
-        "id": "ba23fe1ffa16ed14",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 360,
-        "wires": [
-            [
-                "1725374f271e4efc"
-            ]
-        ]
-    },
-    {
-        "id": "377b870d6377fa6a",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "db914e64bec8b614",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "$exists(arg)",
-        "func": "// $exists(arg)\n\nconst data = {\n    example: [\n    true,\n    false,\n    \"\",\n    \"Hello world\",\n    0,\n    1,\n    null,\n    [],\n    [ false, true ],\n    [false],\n    {},\n    { \"non\": \"empty\" },\n    function test() { return; },\n    ],\n};\n\n// Returns Boolean, true if the arg expression evaluates to a value\n// or false if the expression does not match anything\nconst expression = [\n    jsonata(\"$exists(example[0])\"),\n    jsonata(\"$exists(example[1])\"),\n    jsonata(\"$exists(example[2])\"),\n    jsonata(\"$exists(example[3])\"),\n    jsonata(\"$exists(example[4])\"),\n    jsonata(\"$exists(example[5])\"),\n    jsonata(\"$exists(example[6])\"),\n    jsonata(\"$exists(example[7])\"),\n    jsonata(\"$exists(example[8])\"),\n    jsonata(\"$exists(example[9])\"),\n    jsonata(\"$exists(example[10])\"),\n    jsonata(\"$exists(example[11])\"),\n    jsonata(\"$exists(example[12])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n    expression[3].evaluate(data),\n    expression[4].evaluate(data),\n    expression[5].evaluate(data),\n    expression[6].evaluate(data),\n    expression[7].evaluate(data),\n    expression[8].evaluate(data),\n    expression[9].evaluate(data),\n    expression[10].evaluate(data),\n    expression[11].evaluate(data),\n    expression[12].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 400,
-        "wires": [
-            [
-                "e6ab1014ef3d7b12"
-            ]
-        ]
-    },
-    {
-        "id": "188fe1c2d2ebb8e3",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 400,
-        "wires": [
-            [
-                "db914e64bec8b614"
-            ]
-        ]
-    },
-    {
-        "id": "e6ab1014ef3d7b12",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "7f9221a083cba77c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "f9c483f70a4914e0",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$count(arr)",
-        "func": "// $count(array)\n\nconst data = {\n    example1: [ 1, 2, 3, 4, 5 ],\n    example2: [\"Hello World\"],\n    example3: [ true, null, \"\", {}],\n};\n\n// Returns the number of items in the array\nconst expression = [\n    jsonata(\"$count(example1)\"),\n    jsonata(\"$count(example2)\"),\n    jsonata(\"$count(example3)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 500,
-        "wires": [
-            [
-                "097dda9b77c22bbc"
-            ]
-        ]
-    },
-    {
-        "id": "654c7ea2cc076b7d",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 500,
-        "wires": [
-            [
-                "f9c483f70a4914e0"
-            ]
-        ]
-    },
-    {
-        "id": "097dda9b77c22bbc",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "6c7dcaa639c75761",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$append(arr1, arr2)",
-        "func": "// $append(array1, array2)\n\nconst data = {\n    example1: [ 1, 2, 3, 4, 5 ],\n    example2: [\"Hello World\"],\n    example3: [ true, null, \"\", {}],\n};\n\n// Returns an array containing the values in array1 followed by the values in array2.\n// If either parameter is not an array, then it is treated as a singleton array containing that value\nconst expression = [\n    jsonata(\"$append(example1, [6,7,8,9])\"),\n    jsonata(\"$append(example2, 'This is JSONata')\"),\n    jsonata(\"$append(example3, false)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 930,
-        "y": 540,
-        "wires": [
-            [
-                "39348bddd6cd6ea4"
-            ]
-        ]
-    },
-    {
-        "id": "bb52ed5515e1600c",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 540,
-        "wires": [
-            [
-                "6c7dcaa639c75761"
-            ]
-        ]
-    },
-    {
-        "id": "39348bddd6cd6ea4",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "6587273cf41528ac",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$sort(arr, fun)",
-        "func": "// $sort(array [, function])\n\nconst data = {\n    example1: [ 4, 3, 5, 1, 2 ],\n    example2: [ \"Hello World\", \"a\", \"test\" ],\n};\n\n// Returns an array containing all the values in the array, but sorted into order\nconst expression = [\n    jsonata(\"$sort(example1, function($l, $r) {$l > $r})\"),\n    jsonata(\"$sort(example1, function($l, $r) {$l < $r})\"),\n    jsonata(\"$sort(example2, function($l, $r) {$l < $r})\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 920,
-        "y": 580,
-        "wires": [
-            [
-                "e4bc41c71f22c31c"
-            ]
-        ]
-    },
-    {
-        "id": "37bc59e118a6145b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 580,
-        "wires": [
-            [
-                "6587273cf41528ac"
-            ]
-        ]
-    },
-    {
-        "id": "e4bc41c71f22c31c",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "af1434a6c955ae35",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$reverse(arr)",
-        "func": "// $reverse(array)\n\nconst data = {\n    example1: [ 1, 2, 3, 4, 5 ],\n    example2: [ \"A\", \"B\", \"C\", \"D\" ],\n};\n\n// Returns an array containing all the values from the array, but in reverse order\nconst expression = [\n    jsonata(\"$reverse(example1)\"),\n    jsonata(\"$reverse(example2)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 620,
-        "wires": [
-            [
-                "31e9ea391e2d85e1"
-            ]
-        ]
-    },
-    {
-        "id": "c19e927408c93b3c",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 620,
-        "wires": [
-            [
-                "af1434a6c955ae35"
-            ]
-        ]
-    },
-    {
-        "id": "31e9ea391e2d85e1",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "17602f594fda49bf",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$shuffle(arr)",
-        "func": "// $shuffle(array)\n\nconst data = {\n    example1: [ 1, 2, 3, 4, 5 ],\n    example2: [ \"A\", \"B\", \"C\", \"D\" ],\n};\n\n// Returns an array containing all the values in the array, but shuffled into random order\nconst expression = [\n    jsonata(\"$shuffle(example1)\"),\n    jsonata(\"$shuffle(example2)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 660,
-        "wires": [
-            [
-                "b73901b3c9abd775"
-            ]
-        ]
-    },
-    {
-        "id": "09b2c334fbdb315e",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 660,
-        "wires": [
-            [
-                "17602f594fda49bf"
-            ]
-        ]
-    },
-    {
-        "id": "b73901b3c9abd775",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "d1b7e717ae08481a",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$distinct(arr)",
-        "func": "// $distinct(array)\n\nconst data = {\n    example1: [ 1, 2, 1, 2, 3, 4, 1, 5, 4 ],\n    example2: [ \"A\", \"A\", \"B\", \"C\", \"D\", \"D\" ],\n};\n\n// Returns an array containing all the values in the array, but with any duplicates removed\nconst expression = [\n    jsonata(\"$distinct(example1)\"),\n    jsonata(\"$distinct(example2)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 700,
-        "wires": [
-            [
-                "8b10eec1d8499638"
-            ]
-        ]
-    },
-    {
-        "id": "9e8177571be8f99f",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 700,
-        "wires": [
-            [
-                "d1b7e717ae08481a"
-            ]
-        ]
-    },
-    {
-        "id": "8b10eec1d8499638",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "3382776fb18d904d",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "$zip(arr1, ...)",
-        "func": "// $zip(array1, ...)\n\nconst data = {\n    example1: [ 1, 2, 3, 4, 5 ],\n    example2: [ \"A\", \"B\", \"C\", \"D\", \"E\" ],\n};\n\n// Returns a convolved (zipped) array containing grouped arrays \n// of values from the array1 ... arrayN arguments from index 0, 1, 2, etc\nconst expression = [\n    jsonata(\"$zip(example1, example2)\"),\n    jsonata(\"$zip(example2, example1)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 740,
-        "wires": [
-            [
-                "da8f480b32e83de4"
-            ]
-        ]
-    },
-    {
-        "id": "7159dde8aba9e05c",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 740,
-        "wires": [
-            [
-                "3382776fb18d904d"
-            ]
-        ]
-    },
-    {
-        "id": "da8f480b32e83de4",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "340943aaa9afde77",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "fd352b5e5dc6694b",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "$now()",
-        "func": "// $now([picture [, timezone]])\n\nconst data = {\n    example1: \"[M01]/[D01]/[Y0001] [h#1]:[m01][P]\",\n    example2: \"[H01]:[m01]:[s01] [z]\",\n    example3: \"-0600\",\n};\n\n// Generates a UTC timestamp in ISO 8601 compatible format and returns it as a string\n// If the optional picture and timezone parameters are supplied,\n// then the current timestamp is formatted as described by the $fromMillis() function\nconst expression = [\n    jsonata(\"$now()\"),\n    jsonata(\"$now(example1, example3)\"),\n    jsonata(\"$now(example2, example3)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 890,
-        "y": 1300,
-        "wires": [
-            [
-                "7270656ece6828a3"
-            ]
-        ]
-    },
-    {
-        "id": "2df69d3de31443a9",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1300,
-        "wires": [
-            [
-                "fd352b5e5dc6694b"
-            ]
-        ]
-    },
-    {
-        "id": "7270656ece6828a3",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "5c92eeb77a6194d8",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "$millis()",
-        "func": "// $millis()\n\n// Returns the number of milliseconds since the Unix Epoch (1 January, 1970 UTC) as a number\nconst expression = jsonata(\"$millis()\");\n\nmsg.payload = expression.evaluate();\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 1340,
-        "wires": [
-            [
-                "74023126b34ed888"
-            ]
-        ]
-    },
-    {
-        "id": "a25502239ecce614",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1340,
-        "wires": [
-            [
-                "5c92eeb77a6194d8"
-            ]
-        ]
-    },
-    {
-        "id": "74023126b34ed888",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "cfed144c068126e1",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "$fromMillis(num, pic, tim)",
-        "func": "// $fromMillis(number [, picture [, timezone]])\n\nconst data = {\n    number: 1647393801477,\n    picture1: \"[M01]/[D01]/[Y0001] [h#1]:[m01][P]\",\n    picture2: \"[H01]:[m01]:[s01] [z]\",\n    timezone: \"-0600\",\n};\n\n// Generates a UTC timestamp in ISO 8601 compatible format and returns it as a string\n// If the optional picture and timezone parameters are supplied,\n// then the current timestamp is formatted as described by the $fromMillis() function\nconst expression = [\n    jsonata(\"$fromMillis(number)\"),\n    jsonata(\"$fromMillis(number, picture1)\"),\n    jsonata(\"$fromMillis(number, picture2, timezone)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 950,
-        "y": 1380,
-        "wires": [
-            [
-                "027fa6ccac0cbc56"
-            ]
-        ]
-    },
-    {
-        "id": "011afb255d074158",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1380,
-        "wires": [
-            [
-                "cfed144c068126e1"
-            ]
-        ]
-    },
-    {
-        "id": "027fa6ccac0cbc56",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "c7751bd2f8c49d94",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "$toMillis(tim, pic)",
-        "func": "// $toMillis(timestamp [, picture])\n\nconst data = {\n    number1: \"2022-03-16T01:23:21.477Z\",\n    number2: \"03/16/2022 1:23am\",\n    number3: \"19:23:21\",\n    picture1: \"[M01]/[D01]/[Y0001] [h#1]:[m01][P]\",\n    picture2: \"[H01]:[m01]:[s01]\",\n};\n\n// Generates a UTC timestamp in ISO 8601 compatible format and returns it as a string\n// If the optional picture and timezone parameters are supplied,\n// then the current timestamp is formatted as described by the $fromMillis() function\nconst expression = [\n    jsonata(\"$toMillis(number1)\"),\n    jsonata(\"$toMillis(number2, picture1)\"),\n    jsonata(\"$toMillis(number3, picture2)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 930,
-        "y": 1420,
-        "wires": [
-            [
-                "4c12d0e6c7d4268e"
-            ]
-        ]
-    },
-    {
-        "id": "e4cf415c1974fc31",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1420,
-        "wires": [
-            [
-                "c7751bd2f8c49d94"
-            ]
-        ]
-    },
-    {
-        "id": "4c12d0e6c7d4268e",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "c88dadefed23d4b9",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "18d6a3564775eda6",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "$map(arr, fun)",
-        "func": "// $map(array, function)\n// function(value [, index [, array]])\n\nconst data = {\n    \"example1\": [ 1, 2, 3, 4, 5 ],\n    \"example2\": [ \"A\", \"B\", \"C\", \"D\", \"E\" ],\n};\n\n// Returns an array containing the results of applying the function parameter to each value in the array parameter\nconst expression = [\n    jsonata(\"$map(example1, $string)\"),\n    jsonata(\"$map(example1, function($v, $i, $a) { $v + 2 })\"),\n    jsonata(\"$map(example2, function($v, $i, $a) { 'Item ' & ($i+1) & ' of ' & $count($a) & ': ' & $v })\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 1540,
-        "y": 100,
-        "wires": [
-            [
-                "d5893c4cb59a4bdd"
-            ]
-        ]
-    },
-    {
-        "id": "50eaf8e14a07f52a",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 100,
-        "wires": [
-            [
-                "18d6a3564775eda6"
-            ]
-        ]
-    },
-    {
-        "id": "d5893c4cb59a4bdd",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "36b74a0ba9d50269",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "$filter(arr, fun)",
-        "func": "// $filter(array, function)\n// function(value [, index [, array]])\n\nconst data = {\n    \"example1\": [ 1, 2, 3, 4, 5 ],\n    \"example2\": [ \"A\", \"B\", \"C\", \"D\", \"E\" ],\n};\n\n// Returns an array containing only the values in the array parameter that satisfy the function predicate\nconst expression = [\n    jsonata(\"$filter(example1, function($v, $i, $a) { $v > 2 })\"),\n    jsonata(\"$filter(example2, function($v, $i, $a) { $v != 'C' })\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 1540,
-        "y": 140,
-        "wires": [
-            [
-                "351f1fe279abfa7f"
-            ]
-        ]
-    },
-    {
-        "id": "b82c63ced822b93b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 140,
-        "wires": [
-            [
-                "36b74a0ba9d50269"
-            ]
-        ]
-    },
-    {
-        "id": "351f1fe279abfa7f",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "ce71c4e4ac746a82",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "$single(arr, fun)",
-        "func": "// $single(array, function)\n// function(value [, index [, array]])\n\nconst data = {\n    \"example1\": [ 1, 2, 3, 4, 5 ],\n    \"example2\": [ \"A\", \"B\", \"C\", \"D\", \"E\" ],\n};\n\n// Returns the one and only one value in the array parameter that satisfy the function predicate\n// Throws an exception if the number of matching values is not exactly one\nconst expression = [\n    jsonata(\"$single(example1, function($v, $i, $a) { $v = 2 })\"),\n    jsonata(\"$single(example2, function($v, $i, $a) { $v = 'C' })\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 1540,
-        "y": 180,
-        "wires": [
-            [
-                "40b1d4409f6b8dd5"
-            ]
-        ]
-    },
-    {
-        "id": "5b3f848b04096e1c",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 180,
-        "wires": [
-            [
-                "ce71c4e4ac746a82"
-            ]
-        ]
-    },
-    {
-        "id": "40b1d4409f6b8dd5",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "9ad04f517b2aa836",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "$reduce(arr, fun, ini)",
-        "func": "// $reduce(array, function [, init])\n// function($accumulator, $value[, $index[, $array]])\n\nconst data = {\n    \"example\": [ 1, 2, 3, 4, 5 ],\n};\n\n// Returns an aggregated value derived from applying the function parameter successively to each value in array\n// in combination with the result of the previous application of the function\nconst expression = [\n    jsonata(\"$reduce(example, function($i, $j){$i + $j})\"),\n    jsonata(\"$reduce(example, function($i, $j){$i * $j})\"),\n    jsonata(\"$reduce(example, function($i, $j){$i + $j}, 405)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 1560,
-        "y": 220,
-        "wires": [
-            [
-                "23811eafe28ed4b0"
-            ]
-        ]
-    },
-    {
-        "id": "ec88ad1de0080364",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 1350,
-        "y": 220,
-        "wires": [
-            [
-                "9ad04f517b2aa836"
-            ]
-        ]
-    },
-    {
-        "id": "23811eafe28ed4b0",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "b9473f481d46341e",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "61eba193709b4747",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$keys(obj)",
-        "func": "// $keys(object)\n\nconst data = {\n    example1: {\n        \"A\": 1,\n        \"B\": 2,\n        \"C\": 3,\n        \"D\": 4,\n        \"E\": 5,\n    },\n    example2: {\n        \"payload\": \"Success\",\n        \"topic\": \"test\",\n    },\n    example3: [\n        { \"A\": 1 },\n        { \"B\": 2 },\n        { \"A\": 3 },\n        { \"C\": 4 },\n        { \"B\": 5 },\n        { \"A\": 6 },\n    ],\n};\n\n// Returns an array containing the keys in the object.\n// If the argument is an array of objects, then the returned contains\n// a de-duplicated list of all the keys in all of the objects.\nconst expression = [\n    jsonata(\"$keys(example1)\"),\n    jsonata(\"$keys(example2)\"),\n    jsonata(\"$keys(example3)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 840,
-        "wires": [
-            [
-                "cae58acf1d4d93b0"
-            ]
-        ]
-    },
-    {
-        "id": "b81ac77059018d6a",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 840,
-        "wires": [
-            [
-                "61eba193709b4747"
-            ]
-        ]
-    },
-    {
-        "id": "cae58acf1d4d93b0",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "c0a1f8ffaea953f2",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$lookup(obj, key)",
-        "func": "// $lookup(object, key)\n\nconst data = {\n    example1: {\n        \"A\": 1,\n        \"B\": 2,\n        \"C\": 3,\n        \"D\": 4,\n        \"E\": 5,\n    },\n    example2: {\n        \"payload\": \"Success\",\n        \"topic\": \"test\",\n    },\n    example3: [\n        { \"A\": 1 },\n        { \"B\": 2 },\n        { \"C\": 3 },\n        { \"D\": 4 },\n        { \"E\": 5 },\n        { \"A\": 6 },\n    ],\n};\n\n// Returns the value associated with key in object.\n// If the first argument is an array of objects,\n// then all objects in the array are searched,\n// and the values associated with all occurrences of key are returned\nconst expression = [\n    jsonata(\"$lookup(example1, 'B')\"),\n    jsonata(\"$lookup(example2, 'payload')\"),\n    jsonata(\"$lookup(example3, 'A')\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 930,
-        "y": 880,
-        "wires": [
-            [
-                "4c8ea5fc5fa0df83"
-            ]
-        ]
-    },
-    {
-        "id": "51eb088026f66aa7",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 880,
-        "wires": [
-            [
-                "c0a1f8ffaea953f2"
-            ]
-        ]
-    },
-    {
-        "id": "4c8ea5fc5fa0df83",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "6b58edf53c9aeb7e",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$spread(obj)",
-        "func": "// $spread(object)\n\nconst data = {\n    example1: {\n        \"A\": 1,\n        \"B\": 2,\n        \"C\": 3,\n        \"D\": 4,\n        \"E\": 5,\n    },\n    example2: {\n        \"payload\": \"Success\",\n        \"topic\": \"test\",\n    },\n    example3: [\n        { \"A\": 1 },\n        { \"B\": 2 },\n        { \"C\": 3 },\n        { \"D\": 4 },\n        { \"E\": 5 },\n        { \"A\": 6 },\n    ],\n};\n\n// Splits an object containing key/value pairs into an array of objects,\n// each of which has a single key/value pair from the input object.\n// If the parameter is an array of objects,\n// then the resultant array contains an object for every key/value pair in every object in the array\nconst expression = [\n    jsonata(\"$spread(example1)\"),\n    jsonata(\"$spread(example2)\"),\n    jsonata(\"$spread(example3)\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 920,
-        "wires": [
-            [
-                "431b43d750db4608"
-            ]
-        ]
-    },
-    {
-        "id": "ccf9e24c2cfc12cf",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 920,
-        "wires": [
-            [
-                "6b58edf53c9aeb7e"
-            ]
-        ]
-    },
-    {
-        "id": "431b43d750db4608",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "48f3baac75b8cb33",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$merge([obj])",
-        "func": "// $merge(array<object>)\n\nconst data = {\n    example1: [\n        { \"A\": 1 },\n        { \"B\": 2 },\n        { \"C\": 3 },\n        { \"D\": 4 },\n        { \"E\": 5 },\n        { \"A\": 6 },\n    ],\n};\n\n// Merges an array of objects into a single object containing all the key/value pairs\n// from each of the objects in the input array.\n// If any of the input objects contain the same key,\n// then the returned object will contain the value of the last one in the array.\n// It is an error if the input array contains an item that is not an object.\nconst expression = jsonata(\"$merge(example1)\");\n\nmsg.payload = expression.evaluate(data);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 960,
-        "wires": [
-            [
-                "7d381368a9723eb3"
-            ]
-        ]
-    },
-    {
-        "id": "802e2e41ec6aaa2d",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 960,
-        "wires": [
-            [
-                "48f3baac75b8cb33"
-            ]
-        ]
-    },
-    {
-        "id": "7d381368a9723eb3",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "fc6db6f01385990e",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$type(val)",
-        "func": "// $type(value)\n\nconst data = {\n    example: [\n    null,\n    1,\n    \"Hello world\",\n    true,\n    [ 0, 1, 2 ],\n    { \"payload\": \"success\" },\n    function test() { return; },\n    undefined,\n    ],\n};\n\n// Evaluates the type of value and returns it's type as a string\n// Returns(non - string) undefined when value is undefined\nconst expression = [\n    jsonata(\"$type(example[0])\"),\n    jsonata(\"$type(example[1])\"),\n    jsonata(\"$type(example[2])\"),\n    jsonata(\"$type(example[3])\"),\n    jsonata(\"$type(example[4])\"),\n    jsonata(\"$type(example[5])\"),\n    jsonata(\"$type(example[6])\"),\n    jsonata(\"$type(example[7])\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n    expression[3].evaluate(data),\n    expression[4].evaluate(data),\n    expression[5].evaluate(data),\n    expression[6].evaluate(data),\n    expression[7].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 900,
-        "y": 1200,
-        "wires": [
-            [
-                "3a58277f580af7a4"
-            ]
-        ]
-    },
-    {
-        "id": "a8a96fff189b0f6a",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1200,
-        "wires": [
-            [
-                "fc6db6f01385990e"
-            ]
-        ]
-    },
-    {
-        "id": "3a58277f580af7a4",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "39dc8115391725fd",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$sift(obj, fun)",
-        "func": "// $sift(object, function)\n// The function that is supplied must have the following signature:\n// function(value [, key [, object]])\n\nconst data = {\n    \"Customer1\": {\n        \"CustomerID\": 12345,\n        \"Name\": \"Billy Bob\",\n        \"Model\": \"Y\",\n    },\n    \"Employee1\": {\n        \"EmployeeID\": 24680,\n        \"Name\": \"Fred Rock\",\n        \"Model\": \"3\",\n    },\n    \"Employee2\": {\n        \"EmployeeID\": 13579,\n        \"Name\": \"Ash Luis\",\n        \"Model\": \"S\",\n    },\n    \"Customer2\": {\n        \"CustomerID\": 54321,\n        \"Name\": \"Amber Daniels\",\n        \"Model\": \"X\",\n    },\n    \"Customer3\": {\n        \"CustomerID\": 98765,\n        \"Name\": \"April Star\",\n        \"Model\": \"3\",\n    },\n};\n\n// Returns an object that contains only the key/value pairs from the object parameter\n// that satisfy the predicate function passed in as the second parameter.\n// If object is not specified, then the context value is used as the value of object.\nconst expression = [\n    jsonata(\"$sift(function($v, $k) {$k ~> /^Customer/})\"),\n    jsonata(\"$sift(function($v, $k) {$k ~> /^Employee/})\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 1000,
-        "wires": [
-            [
-                "b1aea701f0274f22"
-            ]
-        ]
-    },
-    {
-        "id": "6599d5d264063dd4",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1000,
-        "wires": [
-            [
-                "39dc8115391725fd"
-            ]
-        ]
-    },
-    {
-        "id": "b1aea701f0274f22",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "8c5ea777d24b40b6",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$each(obj, fun)",
-        "func": "// $each(object, function)\n// function(value, name)\n\nconst data = {\n    \"Customer1\": {\n        \"CustomerID\": 12345,\n        \"Name\": \"Billy Bob\",\n        \"Model\": \"Y\",\n    },\n    \"Employee1\": {\n        \"EmployeeID\": 24680,\n        \"Name\": \"Fred Rock\",\n        \"Model\": \"3\",\n    },\n    \"Employee2\": {\n        \"EmployeeID\": 13579,\n        \"Name\": \"Ash Luis\",\n        \"Model\": \"S\",\n    },\n    \"Customer2\": {\n        \"CustomerID\": 54321,\n        \"Name\": \"Amber Daniels\",\n        \"Model\": \"X\",\n    },\n    \"Customer3\": {\n        \"CustomerID\": 98765,\n        \"Name\": \"April Star\",\n        \"Model\": \"3\",\n    },\n};\n\n// Returns an array of the values return by the function\n// when applied to each key/value pair in the object.\nconst expression = [\n    jsonata(\"$each(function($v, $k) {$k & ': ' & $v})\"),\n    jsonata(\"$each(function($v, $k) {$k})\"),\n    jsonata(\"$each(function($v, $k) {$v})\"),\n];\n\nmsg.payload = [\n    expression[0].evaluate(data),\n    expression[1].evaluate(data),\n    expression[2].evaluate(data),\n];\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 920,
-        "y": 1040,
-        "wires": [
-            [
-                "a89af6cedd3f2e0d"
-            ]
-        ]
-    },
-    {
-        "id": "a43595f67aa34ea0",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1040,
-        "wires": [
-            [
-                "8c5ea777d24b40b6"
-            ]
-        ]
-    },
-    {
-        "id": "a89af6cedd3f2e0d",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "5b772280cd54e62a",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$error(mes)",
-        "func": "// $error(message)\n\n// HACKY WORKAROUND for message parameter to be usable\nnode.error(jsonata(\"$error('Error 12345')\").ast().arguments[0].value);",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 910,
-        "y": 1080,
-        "wires": [
-            [
-                "6461cdef7011b35b"
-            ]
-        ]
-    },
-    {
-        "id": "f84533d7ab3f5a83",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 730,
-        "y": 1080,
-        "wires": [
-            [
-                "5b772280cd54e62a"
-            ]
-        ]
-    },
-    {
-        "id": "6461cdef7011b35b",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "988336dcd37a967f",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 730,
-        "y": 1120,
-        "wires": [
-            [
-                "9e99aca1b6592c26"
-            ]
-        ]
-    },
-    {
-        "id": "16d4c7d19f1d655b",
-        "type": "inject",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2",
-        "payloadType": "num",
-        "x": 730,
-        "y": 1160,
-        "wires": [
-            [
-                "9e99aca1b6592c26"
-            ]
-        ]
-    },
-    {
-        "id": "cfeb74d0e7f0153e",
-        "type": "debug",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "9e99aca1b6592c26",
-        "type": "function",
-        "z": "2b674150e0c6799d",
-        "g": "d4f828aaee7233fb",
-        "name": "$assert(con, mes)",
-        "func": "// $assert(condition, message)\n\n// If condition is true, the function returns { \"payload\": \"assertation is true\" }.\n// If condition is false, an error is thrown, with the message as the message of the error.\nmsg.payload = jsonata(`$assert(${msg.payload} % 2 = 0, \"Number must be even\")`);\n\n// HACKY WORKAROUND for message parameter to be usable\n// 'if condition' must be relevant to 'assert condition'\nif (msg.payload.ast().arguments[0].lhs.lhs.value % 2 == 0) return { \"payload\": \"assertation is true\" };\nelse node.error(`${msg.payload.ast().arguments[1].value}`);",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [
-            {
-                "var": "jsonata",
-                "module": "jsonata"
-            }
-        ],
-        "x": 930,
-        "y": 1140,
-        "wires": [
-            [
-                "cfeb74d0e7f0153e"
-            ]
-        ]
-    },
-    {
-        "id": "1aa173400b86378f",
-        "type": "comment",
-        "z": "2b674150e0c6799d",
-        "name": "This flow requires the npm module jsonata",
-        "info": "run 'npm i jsonata' from your .node-red directory\nand set functionExternalModules to true in your settings.js file",
-        "x": 800,
-        "y": 40,
-        "wires": []
     }
 ]

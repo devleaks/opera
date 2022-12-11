@@ -36,10 +36,10 @@ taxiways-buffer.geojson: taxiways.geojson taxiway-buffer.js
 	node taxiway-buffer.js
 
 
-data: data-airport.geojson data-flight.geojson data-service.geojson data-mission.geojson
+data: data-aerodrome.geojson data-flight.geojson data-service.geojson data-mission.geojson
 
-data-airport.geojson: aerodrome-buffer.geojson
-	cp aerodrome-buffer.geojson data-airport.geojson
+data-aerodrome.geojson: aerodrome-buffer.geojson
+	cp aerodrome-buffer.geojson data-aerodrome.geojson
 
 data-flight.geojson: runways-buffer.geojson taxiways-buffer.geojson aprons-buffer.geojson ramps-buffer.geojson
 	node concat.js runways-buffer.geojson taxiways-buffer.geojson aprons-buffer.geojson ramps-buffer.geojson
@@ -53,8 +53,17 @@ data-mission.geojson: checkpoints-buffer.geojson
 	cp checkpoints-buffer.geojson data-mission.geojson
 
 
-install: all
-	mv data-airport.geojson ../data/airport.geojson
-	mv data-flight.geojson ../data/flight.geojson
-	mv data-service.geojson ../data/service.geojson
-	mv data-mission.geojson ../data/mission.geojson
+../data/aerodrome.geojson: data-aerodrome.geojson
+	cp data-aerodrome.geojson ../data/aerodrome.geojson
+
+../data/flight.geojson: data-flight.geojson
+	cp data-flight.geojson ../data/flight.geojson
+
+../data/service.geojson: data-service.geojson
+	cp data-service.geojson ../data/service.geojson
+
+../data/mission.geojson: data-mission.geojson
+	cp data-mission.geojson ../data/mission.geojson
+
+
+install: ../data/aerodrome.geojson ../data/flight.geojson ../data/service.geojson ../data/mission.geojson

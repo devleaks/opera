@@ -33,7 +33,7 @@ Object.entries(circles).forEach(([akey, value]) => {
     f2.properties["stroke-width"] = 1;
     f2.properties["stroke-opacity"] = 1;
     // f2.properties["fill"] = null;
-    f2.properties["fill-opacity"] = 0;
+    f2.properties["fill-opacity"] = 0.01;
 
     fc2.push(JSON.parse(JSON.stringify(f2)));
 })
