@@ -12,6 +12,7 @@
     "geoflatbush": "^1.0.0",
     "geojson-rbush": "^3.2.0",
     "h3-js": "^4.0.1",
+    "h3-polyfill": "^1.2.0",
     "jsonata": "^1.8.6",
     "moment": "^2.29.4",
     "node-red": "^3.0.2",

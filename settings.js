@@ -418,9 +418,10 @@ module.exports = {
      */
     functionGlobalContext: {
         // os:require('os'),
-        h3:require('h3-js'),
-        turf:require('@turf/turf'),
-        utils:require('./lib/utils/index.js')
+        h3: require('h3-js'),
+        h3Polyfill: require("h3-polyfill"),
+        turf: require('@turf/turf'),
+        utils: require('./lib/utils/index.js')
 //        geoflatbush:require('geoflatbush')
 //        flatbush:require('flatbush')
     },
