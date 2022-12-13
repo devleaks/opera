@@ -1,0 +1,8 @@
+{
+    "jsonata": {
+        "spec": "jsonata",
+        "module": "jsonata",
+        "builtin": false,
+        "known": false
+    }
+}

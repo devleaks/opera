@@ -1,0 +1,352 @@
+[
+    {
+        "id": "b4e67342315def5e",
+        "type": "tab",
+        "label": "Redis tests",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7838dad772340617",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "info",
+        "func": "let redis = context.global.get('redis');\n\nredis.info().then((data)=>{\n    msg.payload = data\n    node.send(msg);\n})\n\n/*\nredis.call(\"anycmd\").then((data)=>{\n    msg.payload = data\n    node.send(msg);\n})*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "03050b0538a9126d"
+            ]
+        ]
+    },
+    {
+        "id": "03050b0538a9126d",
+        "type": "debug",
+        "z": "b4e67342315def5e",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b1753d7197b79cc5",
+        "type": "inject",
+        "z": "b4e67342315def5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "7838dad772340617"
+            ]
+        ]
+    },
+    {
+        "id": "43130ddfe403a30d",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "set",
+        "func": "let redis = context.global.get('redis');\nredis.set('foo', 'bar', (err, reply) => {\n    if (err) throw err;\n    msg.payload = reply;\n    node.send(msg);\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "4f2cfc137f863bbb"
+            ]
+        ]
+    },
+    {
+        "id": "161552312bb8771e",
+        "type": "inject",
+        "z": "b4e67342315def5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "43130ddfe403a30d"
+            ]
+        ]
+    },
+    {
+        "id": "4f2cfc137f863bbb",
+        "type": "debug",
+        "z": "b4e67342315def5e",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "27ffd362df228497",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "get",
+        "func": "let redis = context.global.get('redis');\nredis.get('foo', (err, reply) => {\n    if (err) throw err;\n    msg.payload = reply;\n    node.send(msg);\n});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "c5397d07678eee50"
+            ]
+        ]
+    },
+    {
+        "id": "02c9539811094b7b",
+        "type": "inject",
+        "z": "b4e67342315def5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "27ffd362df228497"
+            ]
+        ]
+    },
+    {
+        "id": "c5397d07678eee50",
+        "type": "debug",
+        "z": "b4e67342315def5e",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "05c815109762ffdc",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "set/get json",
+        "func": "let redis = context.global.get('redis');\n\nawait redis.call(\"JSON.SET\", \"doc\", \"$\", '{\"f1\": {\"a\":42}, \"f2\":{\"a\":2}}');\nconst json = await redis.call(\"JSON.GET\", \"doc\", \"$..f1\");\nmsg.payload = json\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "c8b5336248211cd4"
+            ]
+        ]
+    },
+    {
+        "id": "05c5e06ee345c7ab",
+        "type": "inject",
+        "z": "b4e67342315def5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 340,
+        "wires": [
+            [
+                "05c815109762ffdc"
+            ]
+        ]
+    },
+    {
+        "id": "c8b5336248211cd4",
+        "type": "debug",
+        "z": "b4e67342315def5e",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "29deb285536dd0e1",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "set/get json",
+        "func": "let redis = context.global.get('redis');\n\nlet myfunc = function(err, reply) {\n    if (err) throw err;\n    msg.payload = reply;\n    node.send(msg);\n}\n\n//await redis.call(\"JSON.SET\", \"doc\", \"$\", '{\"f1\": {\"a\":42}, \"f2\":{\"a\":2}}');\n\n\nredis.call(\"JSON.GET\", \"doc\", \"$..f1\", (err, reply) => {\n    if (err) throw err;\n    msg.payload = reply;\n    node.send(msg);\n});\n//msg.payload = json\n//return msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "b5e5721e7e5c278f"
+            ]
+        ]
+    },
+    {
+        "id": "387960203730e46c",
+        "type": "inject",
+        "z": "b4e67342315def5e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "6a9817d001f6418c"
+            ]
+        ]
+    },
+    {
+        "id": "b5e5721e7e5c278f",
+        "type": "debug",
+        "z": "b4e67342315def5e",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6a9817d001f6418c",
+        "type": "function",
+        "z": "b4e67342315def5e",
+        "name": "set/get json",
+        "func": "let redis = context.global.get('redis');\n\nlet args = [\"$\", '{\"f1\": {\"a\":42}, \"f2\":{\"a\":2}}']\n\nredis.call(\"JSON.SET\", \"doc\", args, (err, reply) => {\n    if (err) throw err;\n    msg.set_payload = reply;\n    node.send(msg);\n});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 420,
+        "wires": [
+            [
+                "29deb285536dd0e1"
+            ]
+        ]
+    }
+]

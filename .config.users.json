@@ -1,0 +1,54 @@
+{
+    "_": {
+        "editor": {
+            "view": {
+                "view-store-zoom": false,
+                "view-store-position": false,
+                "view-show-grid": true,
+                "view-snap-grid": true,
+                "view-grid-size": "20",
+                "view-node-status": true,
+                "view-node-show-label": true,
+                "view-show-tips": true,
+                "view-show-welcome-tours": true
+            },
+            "tours": {
+                "welcome": "3.0.2-git"
+            }
+        },
+        "debug": {
+            "filteredNodes": [
+                "476969c59eef0e8b",
+                "38df50cb0d75053d",
+                "3a4513a0498550e6",
+                "9271bfcb27aa6090",
+                "a23c49713e5f8582",
+                "751a6828e2e050c6",
+                "21715cdf5c5117b4",
+                "9abdfd5b4f8801d7",
+                "acea4a003783391c",
+                "1ce897882686d0e1",
+                "49ad98420c60aef0",
+                "07d5b48f604c3557",
+                "c51d98d46bf11a3a",
+                "af98fc5a61e185f6",
+                "bfa613b30541e95b",
+                "0c7a04c2d5b6ac2c",
+                "933cb4522c5335fb",
+                "4a5adf598f20809f",
+                "697c04deb4c916b7",
+                "8e8ea08171187067"
+            ]
+        },
+        "git": {
+            "globalUser": {
+                "name": "Pierre Mareschal",
+                "email": "pierre@devleaks.be"
+            },
+            "user": {
+                "name": "Pierre Mareschal",
+                "email": "pierre@devleaks.be"
+            }
+        }
+    }
+}
