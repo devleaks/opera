@@ -345,7 +345,7 @@ module.exports = {
 
         projects: {
             /** To enable the Projects feature, set this value to true */
-            enabled: false,
+            enabled: true,
             workflow: {
                 /** Set the default projects workflow mode.
                  *  - manual - you must manually commit changes
@@ -419,7 +419,8 @@ module.exports = {
     functionGlobalContext: {
         // os:require('os'),
         h3:require('h3-js'),
-        turf:require('@turf/turf')
+        turf:require('@turf/turf'),
+        utils:require('./lib/utils/index.js')
 //        geoflatbush:require('geoflatbush')
 //        flatbush:require('flatbush')
     },

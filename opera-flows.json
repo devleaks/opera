@@ -1,16 +1,8 @@
 [
     {
-        "id": "955d0aae4f0edf24",
-        "type": "tab",
-        "label": "Init",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "047cb2b68f071355",
         "type": "tab",
-        "label": "Diff",
+        "label": "Hits",
         "disabled": false,
         "info": "# Inside\n\nInside flow emit tuples (emitter, area-of-interest) where the emitter broadcast its position from inside the area of interest.",
         "env": []
@@ -18,15 +10,15 @@
     {
         "id": "b5fd5662d233b60a",
         "type": "tab",
-        "label": "Average",
+        "label": "Events",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "e51c6bf108b92a29",
+        "id": "1728fe1aa6078d0c",
         "type": "tab",
-        "label": "Map (dev)",
+        "label": "Around",
         "disabled": false,
         "info": "",
         "env": []
@@ -35,7 +27,7 @@
         "id": "ee7c991b03eac4ab",
         "type": "tab",
         "label": "H3",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -48,80 +40,36 @@
         "env": []
     },
     {
-        "id": "af63c5f168f03802",
+        "id": "e51c6bf108b92a29",
         "type": "tab",
-        "label": "Load data",
+        "label": "Map (dev)",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "5aa781e7fd97726c",
-        "type": "subflow",
-        "name": "Set DB 0",
+        "id": "955d0aae4f0edf24",
+        "type": "tab",
+        "label": "Init flows",
+        "disabled": false,
         "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 80,
-                "wires": [
-                    {
-                        "id": "39a637f8a38eb153"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 480,
-                "y": 80,
-                "wires": [
-                    {
-                        "id": "49b1d3a8943ea1fe",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#800000",
-        "icon": "node-red/db.svg"
+        "env": []
     },
     {
-        "id": "d4a976387a559a5b",
-        "type": "subflow",
-        "name": "set DB 1",
+        "id": "af63c5f168f03802",
+        "type": "tab",
+        "label": "Prepare data",
+        "disabled": false,
         "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "6036dee6c9e5cce9"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 480,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "ac20ac8a8a24cde2",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#800000",
-        "icon": "node-red/db.svg"
+        "env": []
+    },
+    {
+        "id": "60cc1bf19cdd50f1",
+        "type": "tab",
+        "label": "Tests",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "9240c7042e038827",
@@ -288,358 +236,6 @@
         }
     },
     {
-        "id": "49b1d3a8943ea1fe",
-        "type": "redis-command",
-        "z": "5aa781e7fd97726c",
-        "server": "9240c7042e038827",
-        "command": "SELECT",
-        "name": "db 0",
-        "topic": "",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 370,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "39a637f8a38eb153",
-        "type": "change",
-        "z": "5aa781e7fd97726c",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "0",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 80,
-        "wires": [
-            [
-                "49b1d3a8943ea1fe"
-            ]
-        ]
-    },
-    {
-        "id": "ac20ac8a8a24cde2",
-        "type": "redis-command",
-        "z": "d4a976387a559a5b",
-        "server": "9240c7042e038827",
-        "command": "SELECT",
-        "name": "db 1",
-        "topic": "",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 370,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6036dee6c9e5cce9",
-        "type": "change",
-        "z": "d4a976387a559a5b",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 60,
-        "wires": [
-            [
-                "ac20ac8a8a24cde2"
-            ]
-        ]
-    },
-    {
-        "id": "7db4dc5027e1290e",
-        "type": "redis-instance",
-        "z": "955d0aae4f0edf24",
-        "server": "9240c7042e038827",
-        "name": "",
-        "topic": "redis",
-        "location": "global",
-        "x": 110,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "9caa8dacb9010542",
-        "type": "comment",
-        "z": "955d0aae4f0edf24",
-        "name": "Load data on startup",
-        "info": "",
-        "x": 280,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "ed8af195dd3fd7c8",
-        "type": "inject",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "36f9d6921196a022"
-            ]
-        ]
-    },
-    {
-        "id": "15ae93ecc5e0fbc5",
-        "type": "redis-command",
-        "z": "955d0aae4f0edf24",
-        "server": "9240c7042e038827",
-        "command": "KEYS",
-        "name": "",
-        "topic": "airport:geometries:*",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 210,
-        "y": 260,
-        "wires": [
-            [
-                "77bd3a1feed7d8c5"
-            ]
-        ]
-    },
-    {
-        "id": "bfa613b30541e95b",
-        "type": "debug",
-        "z": "955d0aae4f0edf24",
-        "name": "debug 10",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "77bd3a1feed7d8c5",
-        "type": "split",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 430,
-        "y": 260,
-        "wires": [
-            [
-                "eaaf215fb08b0b42"
-            ]
-        ]
-    },
-    {
-        "id": "eaaf215fb08b0b42",
-        "type": "change",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 260,
-        "wires": [
-            [
-                "ad521ec8f11ae2b9"
-            ]
-        ]
-    },
-    {
-        "id": "ad521ec8f11ae2b9",
-        "type": "redis-command",
-        "z": "955d0aae4f0edf24",
-        "server": "9240c7042e038827",
-        "command": "JSON.GET",
-        "name": "",
-        "topic": "",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 800,
-        "y": 260,
-        "wires": [
-            [
-                "ab3d23c3a2d00932"
-            ]
-        ]
-    },
-    {
-        "id": "ab3d23c3a2d00932",
-        "type": "json",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 970,
-        "y": 260,
-        "wires": [
-            [
-                "856d0d350468a4e0"
-            ]
-        ]
-    },
-    {
-        "id": "856d0d350468a4e0",
-        "type": "function",
-        "z": "955d0aae4f0edf24",
-        "name": "save geom in global",
-        "func": "let name = msg.topic.split(\":\")[2];\ncontext.global.set(name, msg.payload);\nmsg.payload = name\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 180,
-        "y": 340,
-        "wires": [
-            [
-                "b6c4a75ee91e04ee",
-                "0c7a04c2d5b6ac2c"
-            ]
-        ]
-    },
-    {
-        "id": "36f9d6921196a022",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "x": 280,
-        "y": 140,
-        "wires": [
-            [
-                "456a5306fc5ea507"
-            ]
-        ]
-    },
-    {
-        "id": "b6c4a75ee91e04ee",
-        "type": "subflow:5aa781e7fd97726c",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "x": 380,
-        "y": 400,
-        "wires": [
-            [
-                "bfa613b30541e95b"
-            ]
-        ]
-    },
-    {
-        "id": "0c7a04c2d5b6ac2c",
-        "type": "debug",
-        "z": "955d0aae4f0edf24",
-        "name": "global saved",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 550,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "456a5306fc5ea507",
-        "type": "change",
-        "z": "955d0aae4f0edf24",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 140,
-        "wires": [
-            [
-                "15ae93ecc5e0fbc5"
-            ]
-        ]
-    },
-    {
         "id": "fb03cd5f6d45819e",
         "type": "redis-in",
         "z": "047cb2b68f071355",
@@ -663,7 +259,7 @@
         "type": "function",
         "z": "047cb2b68f071355",
         "name": "diff",
-        "func": "// Entering and exiting AoI\nlet arr_in = [];\nlet arr_out = [];\n\nif (msg.payload.properties.hasOwnProperty(\"_inside\") && msg.currpos.properties.hasOwnProperty(\"_inside\")) {\n    if (msg.currpos.properties._inside.length > 0) {\n        arr_in = msg.currpos.properties._inside.filter(x => msg.payload.properties._inside.indexOf(x) == -1);\n        arr_out = msg.payload.properties._inside.filter(x => msg.currpos.properties._inside.indexOf(x) == -1);\n    } else {\n        arr_out = msg.payload.properties._inside;\n    }\n}\n\n// Going through AoI0\nconst fc = context.global.get(msg.emit_type);\nconst geoms = fc.features;\nconst ls = turf.lineString([msg.payload.geometry.coordinates, msg.currpos.geometry.coordinates]);\nlet intersects = geoms.filter(f => turf.booleanIntersects(ls, f));\nif (msg.currpos.properties._inside.length > 0) {  // remove AoI it is currently inside\n    intersects = intersects.filter(x => msg.currpos.properties._inside.indexOf(x) != -1);\n}\n\nlet msg2 = {}\nmsg2.topic = \"emitpy:diff\"\nmsg2.payload = {\n    dt: msg.payload.properties[\"emit-absolute-time\"] - msg.currpos.properties[\"emit-absolute-time\"],\n    dd: turf.distance(msg.payload.geometry, msg.currpos.geometry, \"km\"),\n    so: msg.payload.properties.speed,\n    sc: msg.currpos.properties.speed,\n    stopped: msg.currpos.properties.speed < 0.2, // m/sec.\n    \"ts\": msg.payload.properties[\"emit-absolute-time\"],\n    before: msg.payload.properties._inside,\n    after: msg.currpos.properties._inside,\n    \"enter\": arr_in,\n    \"exit\": arr_out,\n    intersect: intersects.map(f => f.properties.name)\n}\nreturn [msg, msg2];",
+        "func": "// Entering and exiting AoI\nlet arr_in = [];\nlet arr_out = [];\n\nif (msg.payload.properties.hasOwnProperty(\"_inside\") && msg.currpos.properties.hasOwnProperty(\"_inside\")) {\n    if (msg.currpos.properties._inside.length > 0) {\n        arr_in = msg.currpos.properties._inside.filter(x => msg.payload.properties._inside.indexOf(x) == -1);\n        arr_out = msg.payload.properties._inside.filter(x => msg.currpos.properties._inside.indexOf(x) == -1);\n    } else {\n        arr_out = msg.payload.properties._inside;\n    }\n}\n\n// Going through AoI0\nconst fc = context.global.get(msg.emit_type);\nconst geoms = fc.features;\nconst ls = turf.lineString([msg.payload.geometry.coordinates, msg.currpos.geometry.coordinates]);\nlet intersects = geoms.filter(f => turf.booleanIntersects(ls, f));\nif (msg.currpos.properties._inside.length > 0) {  // remove AoI it is currently inside\n    intersects = intersects.filter(x => msg.currpos.properties._inside.indexOf(x) != -1);\n}\n\nlet msg2 = {}\nmsg2.topic = \"emitpy:diff\"\nmsg2.payload = {\n    icao24: msg.icao24,\n    dt: msg.payload.properties[\"emit-absolute-time\"] - msg.currpos.properties[\"emit-absolute-time\"],\n    dd: turf.distance(msg.payload.geometry, msg.currpos.geometry, \"km\"),\n    so: msg.payload.properties.speed,\n    sc: msg.currpos.properties.speed,\n    stopped: msg.currpos.properties.speed < 0.2, // m/sec.\n    \"ts\": msg.payload.properties[\"emit-absolute-time\"],\n    last_in: msg.payload.properties._inside,\n    curr_in: msg.currpos.properties._inside,\n    \"enter\": arr_in,\n    \"exit\": arr_out,\n    intersect: intersects.map(f => f.properties.name)\n}\nreturn [msg, msg2];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -674,15 +270,15 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 530,
-        "y": 700,
+        "x": 170,
+        "y": 800,
         "wires": [
             [
                 "974f2e7eace14b14"
             ],
             [
-                "8df1ad6d03c02b63",
-                "476969c59eef0e8b"
+                "476969c59eef0e8b",
+                "724fd3ad4b29579f"
             ]
         ]
     },
@@ -695,12 +291,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 760,
+        "x": 350,
+        "y": 900,
         "wires": []
     },
     {
@@ -711,12 +307,11 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 360,
-        "y": 700,
+        "x": 180,
+        "y": 520,
         "wires": [
             [
-                "26bc02f69d3eac8a",
-                "ed9b9f6303dafbb2"
+                "26bc02f69d3eac8a"
             ]
         ]
     },
@@ -746,8 +341,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
-        "y": 100,
+        "x": 300,
+        "y": 200,
         "wires": [
             [
                 "253a8a8fc891376b"
@@ -766,7 +361,7 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 170,
+        "x": 470,
         "y": 200,
         "wires": [
             [
@@ -859,7 +454,6 @@
         "y": 260,
         "wires": [
             [
-                "38df50cb0d75053d",
                 "974f2e7eace14b14",
                 "fc95c8b2ea0e731a"
             ],
@@ -881,8 +475,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
-        "y": 240,
+        "x": 950,
+        "y": 260,
         "wires": []
     },
     {
@@ -909,10 +503,10 @@
         "server": "9240c7042e038827",
         "command": "publish",
         "name": "",
-        "topic": "",
+        "topic": "emitpy:io",
         "obj": true,
-        "x": 740,
-        "y": 720,
+        "x": 1000,
+        "y": 820,
         "wires": []
     },
     {
@@ -931,12 +525,11 @@
                 "module": "@turf/turf"
             }
         ],
-        "x": 850,
-        "y": 100,
+        "x": 150,
+        "y": 200,
         "wires": [
             [
-                "ead28dcf07eaec35",
-                "751a6828e2e050c6"
+                "ead28dcf07eaec35"
             ]
         ]
     },
@@ -953,8 +546,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 250,
-        "y": 120,
+        "x": 290,
+        "y": 40,
         "wires": []
     },
     {
@@ -963,14 +556,14 @@
         "z": "047cb2b68f071355",
         "server": "9240c7042e038827",
         "command": "JSON.SET",
-        "name": "save new vehicle",
+        "name": "save",
         "topic": "",
         "params": "[]",
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 830,
-        "y": 400,
+        "x": 750,
+        "y": 380,
         "wires": [
             [
                 "a23c49713e5f8582"
@@ -996,12 +589,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 280,
+        "x": 720,
+        "y": 260,
         "wires": [
             [
-                "b992be35dfd02872",
-                "e3fa6b11aa6516f2"
+                "38df50cb0d75053d",
+                "974f2e7eace14b14"
             ]
         ]
     },
@@ -1013,8 +606,8 @@
         "property": "currpos",
         "action": "",
         "pretty": false,
-        "x": 780,
-        "y": 320,
+        "x": 740,
+        "y": 300,
         "wires": [
             [
                 "20bc0234baef838c"
@@ -1034,8 +627,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 440,
+        "x": 810,
+        "y": 420,
         "wires": []
     },
     {
@@ -1064,7 +657,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
+        "x": 480,
         "y": 80,
         "wires": [
             [
@@ -1077,7 +670,7 @@
         "type": "function",
         "z": "047cb2b68f071355",
         "name": "at aerodrome?",
-        "func": "// Point inside area of interest polygon\nconst aerodrome = context.global.get(\"aerodrome\");\nconst fence = aerodrome.features[0]\nif (turf.booleanPointInPolygon(msg.payload.geometry.coordinates, fence)) {\n    return [null, msg];\n}\nreturn [msg, null];",
+        "func": "// Point inside area of interest polygon\nconst aerodrome = context.global.get(\"aerodrome\");\nlet utils = context.global.get(\"utils\");\nconst fence = utils.findFeature(aerodrome, \"OTHH:aerodrome:aerodrome:perimeter\");\nif (turf.booleanPointInPolygon(msg.payload.geometry.coordinates, fence)) {\n    return [null, msg];\n}\nreturn [msg, null];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n//const geoms = context.flow.get('geometries');\n",
@@ -1098,39 +691,6 @@
                 "01fb44f0c4d8c591"
             ]
         ]
-    },
-    {
-        "id": "751a6828e2e050c6",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "debug 11",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "ed9b9f6303dafbb2",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "f1c92d61e05e4423",
@@ -1167,7 +727,7 @@
         "id": "21715cdf5c5117b4",
         "type": "debug",
         "z": "047cb2b68f071355",
-        "name": "no emit",
+        "name": "no emit (error)",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1176,16 +736,17 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 120,
-        "wires": []
+        "x": 500,
+        "y": 40,
+        "wires": [],
+        "icon": "node-red/alert.svg"
     },
     {
         "id": "ead6fbcebd0293f8",
         "type": "function",
         "z": "047cb2b68f071355",
         "name": "around?",
-        "func": "// Point inside area of interest polygon\nconst geoms = context.global.get(\"airport\");\nconst inside = geoms.features.filter(f => turf.booleanPointInPolygon(msg.payload.geometry.coordinates, f));\nmsg.payload.properties._inside = inside.map(f => f.id);\nif (msg.payload.properties._inside.length > 0) {\n    return msg;\n}\n",
+        "func": "// Point inside area of interest polygon\nconst geoms = context.global.get(\"aerodrome\");\nconst inside = geoms.features.filter(f => turf.booleanPointInPolygon(msg.payload.geometry.coordinates, f));\nmsg.payload.properties._inside = inside.map(f => f.id);\nif (msg.payload.properties._inside.length > 0) {\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\n\n//const geoms = context.flow.get('geometries');\n",
@@ -1197,46 +758,12 @@
             }
         ],
         "x": 860,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
-                "a5cc5476abccc859"
+                "ac6aa1c377a5b919"
             ]
         ]
-    },
-    {
-        "id": "a5cc5476abccc859",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "around",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "b992be35dfd02872",
-        "type": "debug",
-        "z": "047cb2b68f071355",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 320,
-        "wires": []
     },
     {
         "id": "3b2958fcdb7b68de",
@@ -1244,8 +771,8 @@
         "z": "047cb2b68f071355",
         "name": "save new vehicle meta",
         "info": "",
-        "x": 1000,
-        "y": 240,
+        "x": 980,
+        "y": 320,
         "wires": []
     },
     {
@@ -1277,8 +804,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 360,
+        "x": 760,
+        "y": 340,
         "wires": [
             [
                 "0ebf44aceb105c27"
@@ -1286,18 +813,109 @@
         ]
     },
     {
-        "id": "acea4a003783391c",
+        "id": "1c3231c40233e5a8",
+        "type": "comment",
+        "z": "047cb2b68f071355",
+        "name": "emit area hits",
+        "info": "",
+        "x": 450,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "724fd3ad4b29579f",
+        "type": "function",
+        "z": "047cb2b68f071355",
+        "name": "status",
+        "func": "// Entering and exiting AoI\nlet msgs = [];\nlet p = msg.payload;\n\n// AoI just enered\np.enter.forEach( (aoi) => {\n    msgs.push({\n        payload: {\n            icao24: p.icao24,\n            ts: p.ts,\n            action: \"enter\",\n            area: aoi\n        }\n    });\n});\n\n// AoI just exited\np.exit.forEach((aoi) => {\n    msgs.push({\n        payload: {\n            icao24: p.icao24,\n            ts: p.ts,\n            action: \"exit\",\n            area: aoi\n        }\n    });\n});\n\n// AoI that may have been crossed\np.intersect.forEach((aoi) => {\n    msgs.push({\n        payload: {\n            icao24: p.icao24,\n            ts: p.ts,\n            action: \"crossed\",\n            area: aoi\n        }\n    });\n});\n\n// AoI we are stopped in\n// if (p.stopped) {\n//     p.curr_in.forEach((aoi) => {\n//         msgs.push({\n//             payload: {\n//                 icao24: p.icao24,\n//                 ts: p.ts,\n//                 action: \"stopped\",\n//                 area: aoi\n//             }\n//         });\n//     });\n// }\n\nreturn [msgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "turf",
+                "module": "@turf/turf"
+            }
+        ],
+        "x": 330,
+        "y": 820,
+        "wires": [
+            [
+                "9abdfd5b4f8801d7",
+                "c20280747039b346"
+            ]
+        ]
+    },
+    {
+        "id": "9abdfd5b4f8801d7",
         "type": "debug",
-        "z": "b5fd5662d233b60a",
-        "name": "debug 8",
+        "z": "047cb2b68f071355",
+        "name": "status messages",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
+        "x": 590,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c20280747039b346",
+        "type": "change",
+        "z": "047cb2b68f071355",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 820,
+        "wires": [
+            [
+                "8df1ad6d03c02b63"
+            ]
+        ]
+    },
+    {
+        "id": "ac6aa1c377a5b919",
+        "type": "redis-out",
+        "z": "047cb2b68f071355",
+        "server": "9240c7042e038827",
+        "command": "publish",
+        "name": "",
+        "topic": "emitpy:around",
+        "obj": true,
+        "x": 1040,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "acea4a003783391c",
+        "type": "debug",
+        "z": "b5fd5662d233b60a",
+        "name": "promise set result",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
         "y": 120,
         "wires": []
     },
@@ -1308,10 +926,88 @@
         "server": "9240c7042e038827",
         "command": "subscribe",
         "name": "",
-        "topic": "emitpy:diff",
+        "topic": "emitpy:io",
         "obj": true,
         "timeout": 0,
-        "x": 140,
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "6a62f772c31ae557",
+                "3e3112721210ba83",
+                "15e3bf85df3ac527"
+            ]
+        ]
+    },
+    {
+        "id": "6a62f772c31ae557",
+        "type": "function",
+        "z": "b5fd5662d233b60a",
+        "name": "promise",
+        "func": "let requests = context.global.get(\"requests\");\n\nrequests.forEach( (r) => {\n    if (msg.payload.action == r.action1 &&\n        msg.payload.area.startsWith(r.area1)) {\n        node.send({\n            topic: \"vehicles:promise:\"+msg.payload.icao24+\":\"+r.rule,\n            payload: {\n                icao24: msg.payload.icao24,\n                ts: msg.payload.ts,\n                area: msg.payload.area,\n                rule: r.rule\n            }\n        });\n    }\n});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "0bb9bc9eb9033b70",
+                "4a5adf598f20809f"
+            ]
+        ]
+    },
+    {
+        "id": "3e3112721210ba83",
+        "type": "function",
+        "z": "b5fd5662d233b60a",
+        "name": "resolve",
+        "func": "let redis = context.global.get('redis');\nlet requests = context.global.get(\"requests\");\n\nrequests.forEach( (r) => {\n    if (msg.payload.action == r.action2 &&\n        msg.payload.area.startsWith(r.area2)) {\n\n        let pk = \"vehicles:promise:\" + msg.payload.icao24 + \":\" + r.rule\n        redis.call(\"JSON.GET\", pk).then((data) => {\n            if (data != null) {\n                let promise = JSON.parse(data)\n                let rk = \"vehicles:resolve:\" + msg.payload.icao24 + \":\" + r.rule\n                node.send({\n                    topic: rk,\n                    payload: {\n                        rule: r, // r.rule\n                        icao24: msg.payload.icao24,\n                        ts1: promise.ts,\n                        area1: promise.area,\n                        ts2: msg.payload.ts,\n                        area2: msg.payload.area,\n                    }\n                });\n            }\n        });\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "8e8ea08171187067",
+                "ce541adef0dcc4ee"
+            ]
+        ]
+    },
+    {
+        "id": "0bb9bc9eb9033b70",
+        "type": "json",
+        "z": "b5fd5662d233b60a",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "a4c74cb3785237e0"
+            ]
+        ]
+    },
+    {
+        "id": "ed1b34bea767af3f",
+        "type": "redis-command",
+        "z": "b5fd5662d233b60a",
+        "server": "9240c7042e038827",
+        "command": "JSON.SET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 800,
         "y": 120,
         "wires": [
             [
@@ -1320,115 +1016,101 @@
         ]
     },
     {
-        "id": "10201afe73aec65c",
-        "type": "inject",
-        "z": "e51c6bf108b92a29",
+        "id": "a4c74cb3785237e0",
+        "type": "change",
+        "z": "b5fd5662d233b60a",
         "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 140,
-        "wires": [
-            [
-                "2f5196af07d9517b"
-            ]
-        ]
-    },
-    {
-        "id": "0ef9cf1179d2a499",
-        "type": "json",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "property": "payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[ \"$\", msg.payload ]",
+                "tot": "jsonata"
+            }
+        ],
         "action": "",
-        "pretty": false,
-        "x": 1010,
-        "y": 140,
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 120,
         "wires": [
             [
-                "b8b9e6e75ce5f04f",
-                "97f343c3e2bd8d6f"
+                "ed1b34bea767af3f"
             ]
         ]
     },
     {
-        "id": "3ce128e96bce2813",
-        "type": "redis-command",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "JSON.GET",
+        "id": "4a5adf598f20809f",
+        "type": "debug",
+        "z": "b5fd5662d233b60a",
+        "name": "promise",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ce541adef0dcc4ee",
+        "type": "change",
+        "z": "b5fd5662d233b60a",
         "name": "",
-        "topic": "airport:geometries:aerodrome",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts",
+                "pt": "msg",
+                "to": "payload.ts2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "724b22093c0593fc"
+            ]
+        ]
+    },
+    {
+        "id": "9b702b9eff06822b",
+        "type": "redis-command",
+        "z": "b5fd5662d233b60a",
+        "server": "9240c7042e038827",
+        "command": "ZADD",
+        "name": "",
+        "topic": "vehicles:resolve",
         "params": "[]",
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 760,
-        "y": 140,
+        "x": 1040,
+        "y": 260,
         "wires": [
             [
-                "0ef9cf1179d2a499"
+                "697c04deb4c916b7"
             ]
         ]
     },
     {
-        "id": "97f343c3e2bd8d6f",
-        "type": "worldmap",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "lat": "25.27",
-        "lon": "51.6",
-        "zoom": "14",
-        "layer": "OSMG",
-        "cluster": "",
-        "maxage": "",
-        "usermenu": "show",
-        "layers": "show",
-        "panit": "false",
-        "panlock": "false",
-        "zoomlock": "false",
-        "hiderightclick": "false",
-        "coords": "none",
-        "showgrid": "false",
-        "allowFileDrop": "false",
-        "path": "/worldmap",
-        "overlist": "DR,CO,RA,DN,HM",
-        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
-        "mapname": "",
-        "mapurl": "",
-        "mapopt": "",
-        "mapwms": false,
-        "x": 1300,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "4d73113d1182a182",
-        "type": "redis-in",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "subscribe",
-        "name": "emitpy:raw",
-        "topic": "emitpy:raw",
-        "obj": true,
-        "timeout": 0,
-        "x": 140,
-        "y": 500,
-        "wires": [
-            [
-                "7c20b169e2e1ad9f"
-            ]
-        ]
-    },
-    {
-        "id": "1ce897882686d0e1",
+        "id": "697c04deb4c916b7",
         "type": "debug",
-        "z": "e51c6bf108b92a29",
-        "name": "zadd result",
+        "z": "b5fd5662d233b60a",
+        "name": "resolve set result",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -1437,262 +1119,90 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 640,
+        "x": 1290,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "7c20b169e2e1ad9f",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
+        "id": "8e8ea08171187067",
+        "type": "debug",
+        "z": "b5fd5662d233b60a",
+        "name": "resolve",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "15e3bf85df3ac527",
+        "type": "debug",
+        "z": "b5fd5662d233b60a",
+        "name": "emitpy:io",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e3daa798996b0bf2",
+        "type": "inject",
+        "z": "b5fd5662d233b60a",
         "name": "",
-        "rules": [
+        "props": [
             {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
-                "tot": "jsonata"
+                "p": "payload"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 320,
-        "y": 500,
-        "wires": [
-            [
-                "2715a67425b5ed6a"
-            ]
-        ]
-    },
-    {
-        "id": "803b05bb43a16e76",
-        "type": "inject",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "props": [],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 150,
-        "y": 200,
+        "payload": "{\"icao24\":\"6eb996\",\"ts\":1670918491.753563,\"action\":\"enter\",\"area\":\"OTHH:aeroway:apron:APRON:B\"}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 340,
         "wires": [
             [
-                "c27c15cdb074c404"
+                "3e3112721210ba83"
             ]
         ]
     },
     {
-        "id": "c40632476643ae7b",
+        "id": "724b22093c0593fc",
         "type": "json",
-        "z": "e51c6bf108b92a29",
+        "z": "b5fd5662d233b60a",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1010,
-        "y": 200,
-        "wires": [
-            [
-                "97f343c3e2bd8d6f"
-            ]
-        ]
-    },
-    {
-        "id": "38004e0c391774a4",
-        "type": "redis-command",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "JSON.GET",
-        "name": "",
-        "topic": "airport:geometries:flight",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 740,
-        "y": 200,
-        "wires": [
-            [
-                "c40632476643ae7b"
-            ]
-        ]
-    },
-    {
-        "id": "a969271f71fef5cf",
-        "type": "inject",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
+        "x": 630,
         "y": 260,
         "wires": [
             [
-                "aaf5580b5970fe4d"
+                "6a684cef0c04e03f",
+                "857bd59c207c8931"
             ]
         ]
     },
     {
-        "id": "328b1931cd791272",
-        "type": "json",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1010,
-        "y": 260,
-        "wires": [
-            [
-                "97f343c3e2bd8d6f",
-                "b8b9e6e75ce5f04f"
-            ]
-        ]
-    },
-    {
-        "id": "5bb83ebd8a761a83",
-        "type": "redis-command",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "JSON.GET",
-        "name": "",
-        "topic": "airport:geometries:service",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 750,
-        "y": 260,
-        "wires": [
-            [
-                "328b1931cd791272"
-            ]
-        ]
-    },
-    {
-        "id": "77a91445959a337c",
-        "type": "inject",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 320,
-        "wires": [
-            [
-                "9f95735cacf67f56"
-            ]
-        ]
-    },
-    {
-        "id": "464aacf0d003f8da",
-        "type": "json",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1010,
-        "y": 320,
-        "wires": [
-            [
-                "97f343c3e2bd8d6f",
-                "b8b9e6e75ce5f04f"
-            ]
-        ]
-    },
-    {
-        "id": "310e20d64b11bb2f",
-        "type": "redis-command",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "JSON.GET",
-        "name": "",
-        "topic": "airport:geometries:mission",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 750,
-        "y": 320,
-        "wires": [
-            [
-                "464aacf0d003f8da"
-            ]
-        ]
-    },
-    {
-        "id": "19297c0646353a3a",
+        "id": "6a684cef0c04e03f",
         "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ts",
-                "pt": "msg",
-                "to": "payload.properties[\"emit-absolute-time\"]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    \"type\": \"Feature\",\t    \"properties\": {\t        \"ts\": msg.payload.properties.\"emit-absolute-time\",\t        \"icao24\": msg.payload.properties.icao24\t    },\t    \"geometry\": msg.payload.geometry\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 640,
-        "wires": [
-            [
-                "d056a8cc51d53237"
-            ]
-        ]
-    },
-    {
-        "id": "7cebca3f11c4bded",
-        "type": "redis-command",
-        "z": "e51c6bf108b92a29",
-        "server": "9240c7042e038827",
-        "command": "ZADD",
-        "name": "",
-        "topic": "queues:data:heatmap",
-        "params": "[]",
-        "paramsType": "json",
-        "payloadType": "json",
-        "block": false,
-        "x": 940,
-        "y": 640,
-        "wires": [
-            [
-                "1ce897882686d0e1"
-            ]
-        ]
-    },
-    {
-        "id": "44936f151338df0f",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
+        "z": "b5fd5662d233b60a",
         "name": "",
         "rules": [
             {
@@ -1704,7 +1214,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[msg.ts + 20 * 60, msg.payload]",
+                "to": "[msg.ts, msg.payload]",
                 "tot": "jsonata"
             }
         ],
@@ -1713,286 +1223,75 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 640,
+        "x": 800,
+        "y": 260,
         "wires": [
             [
-                "7cebca3f11c4bded"
+                "9b702b9eff06822b"
             ]
         ]
     },
     {
-        "id": "d056a8cc51d53237",
-        "type": "json",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 510,
-        "y": 640,
-        "wires": [
-            [
-                "44936f151338df0f"
-            ]
-        ]
+        "id": "857bd59c207c8931",
+        "type": "debug",
+        "z": "b5fd5662d233b60a",
+        "name": "resolve (as saved)",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 320,
+        "wires": []
     },
     {
-        "id": "11b0cfde95d3dc26",
+        "id": "72817a7c8d2dc2fb",
         "type": "comment",
-        "z": "e51c6bf108b92a29",
-        "name": "Inject (raw) features into map for debugging",
+        "z": "b5fd5662d233b60a",
+        "name": "@todo later: Add expiry date/time on key",
         "info": "",
-        "x": 250,
+        "x": 760,
         "y": 60,
         "wires": []
     },
     {
-        "id": "7c36196cde164071",
-        "type": "comment",
-        "z": "e51c6bf108b92a29",
-        "name": "Inject vehicle into map, schedulel its removal from heatmap",
-        "info": "",
-        "x": 300,
-        "y": 420,
+        "id": "9669c5d0c767637f",
+        "type": "debug",
+        "z": "1728fe1aa6078d0c",
+        "name": "around",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "d79f468d0c51de79",
+        "id": "f02a50779f812a8e",
         "type": "redis-in",
-        "z": "e51c6bf108b92a29",
+        "z": "1728fe1aa6078d0c",
         "server": "9240c7042e038827",
         "command": "subscribe",
         "name": "",
-        "topic": "emitpy:delete",
+        "topic": "emitpy:around",
         "obj": true,
         "timeout": 0,
         "x": 150,
-        "y": 700,
+        "y": 100,
         "wires": [
             [
-                "ab41ae9961b284df"
+                "9669c5d0c767637f"
             ]
         ]
-    },
-    {
-        "id": "ab41ae9961b284df",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\t    \"delete\": true,\t    \"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b8b9e6e75ce5f04f",
-        "type": "subflow:5aa781e7fd97726c",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "x": 1360,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2f5196af07d9517b",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "x": 300,
-        "y": 140,
-        "wires": [
-            [
-                "a9ed5848356fb8c3"
-            ]
-        ]
-    },
-    {
-        "id": "a9ed5848356fb8c3",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 140,
-        "wires": [
-            [
-                "3ce128e96bce2813"
-            ]
-        ]
-    },
-    {
-        "id": "1c2db5938b4c316a",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 200,
-        "wires": [
-            [
-                "38004e0c391774a4"
-            ]
-        ]
-    },
-    {
-        "id": "c5401c1655b548e4",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 260,
-        "wires": [
-            [
-                "5bb83ebd8a761a83"
-            ]
-        ]
-    },
-    {
-        "id": "c03cc3cc284bace6",
-        "type": "change",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 320,
-        "wires": [
-            [
-                "310e20d64b11bb2f"
-            ]
-        ]
-    },
-    {
-        "id": "aaf5580b5970fe4d",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "x": 300,
-        "y": 260,
-        "wires": [
-            [
-                "c5401c1655b548e4"
-            ]
-        ]
-    },
-    {
-        "id": "9f95735cacf67f56",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "x": 300,
-        "y": 320,
-        "wires": [
-            [
-                "c03cc3cc284bace6"
-            ]
-        ]
-    },
-    {
-        "id": "c27c15cdb074c404",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "x": 300,
-        "y": 200,
-        "wires": [
-            [
-                "1c2db5938b4c316a"
-            ]
-        ]
-    },
-    {
-        "id": "2715a67425b5ed6a",
-        "type": "worldmap",
-        "z": "e51c6bf108b92a29",
-        "name": "",
-        "lat": "25.27",
-        "lon": "51.6",
-        "zoom": "14",
-        "layer": "OSMG",
-        "cluster": "",
-        "maxage": "",
-        "usermenu": "show",
-        "layers": "show",
-        "panit": "false",
-        "panlock": "false",
-        "zoomlock": "false",
-        "hiderightclick": "false",
-        "coords": "none",
-        "showgrid": "false",
-        "allowFileDrop": "false",
-        "path": "/worldmap",
-        "overlist": "DR,CO,RA,DN,HM",
-        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
-        "mapname": "",
-        "mapurl": "",
-        "mapopt": "",
-        "mapwms": false,
-        "x": 1220,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "cdaeb816669b22b6",
@@ -2178,8 +1477,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 40,
+        "x": 800,
+        "y": 180,
         "wires": []
     },
     {
@@ -2212,10 +1511,10 @@
         "obj": true,
         "timeout": 0,
         "x": 110,
-        "y": 200,
+        "y": 60,
         "wires": [
             [
-                "d96b9a585e8a8e58"
+                "39ec5c62f2d67188"
             ]
         ]
     },
@@ -2230,68 +1529,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 280,
+        "x": 410,
+        "y": 180,
         "wires": [
             [
                 "52cf1aa80496fcd6",
                 "95070f789505afec",
-                "61389890749add36",
                 "3e441f196f8c1a0e"
-            ]
-        ]
-    },
-    {
-        "id": "d96b9a585e8a8e58",
-        "type": "switch",
-        "z": "180a8a3d97d7dc3f",
-        "name": "is aircraft",
-        "property": "payload.properties",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "hask",
-                "v": "message",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "service",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "mission",
-                "vt": "str"
-            },
-            {
-                "t": "hask",
-                "v": "flight",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 320,
-        "y": 160,
-        "wires": [
-            [
-                "98035f40bf1c3ec8",
-                "05e47a44c83d9367"
-            ],
-            [
-                "a70f6c96d0cfcebc",
-                "7984f525616d5318"
-            ],
-            [
-                "4e4c918648571f07",
-                "7984f525616d5318"
-            ],
-            [
-                "0603b312c0dbc578",
-                "7984f525616d5318",
-                "9ea682a830cf1b4b"
             ]
         ]
     },
@@ -2306,65 +1550,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 220,
+        "x": 420,
+        "y": 300,
         "wires": [
             [
-                "95070f789505afec",
-                "61389890749add36"
+                "95070f789505afec"
             ]
         ]
-    },
-    {
-        "id": "98035f40bf1c3ec8",
-        "type": "debug",
-        "z": "180a8a3d97d7dc3f",
-        "name": "The Wire",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 80,
-        "wires": [],
-        "icon": "node-red/comment.svg"
-    },
-    {
-        "id": "dee46b090cd504ce",
-        "type": "debug",
-        "z": "180a8a3d97d7dc3f",
-        "name": "raw input",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "7984f525616d5318",
-        "type": "debug",
-        "z": "180a8a3d97d7dc3f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "a70f6c96d0cfcebc",
@@ -2377,31 +1569,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 180,
+        "x": 420,
+        "y": 260,
         "wires": [
             [
-                "95070f789505afec",
-                "61389890749add36"
-            ]
-        ]
-    },
-    {
-        "id": "f1288b1d490a9717",
-        "type": "redis-in",
-        "z": "180a8a3d97d7dc3f",
-        "server": "9240c7042e038827",
-        "command": "subscribe",
-        "name": "Test",
-        "topic": "emitpy:test",
-        "obj": true,
-        "timeout": 0,
-        "x": 110,
-        "y": 300,
-        "wires": [
-            [
-                "d96b9a585e8a8e58",
-                "dee46b090cd504ce"
+                "95070f789505afec"
             ]
         ]
     },
@@ -2443,30 +1615,11 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 960,
-        "y": 360,
+        "x": 780,
+        "y": 220,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "05e47a44c83d9367",
-        "type": "ui_toast",
-        "z": "180a8a3d97d7dc3f",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 990,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "52cf1aa80496fcd6",
@@ -2499,8 +1652,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 960,
-        "y": 260,
+        "x": 780,
+        "y": 180,
         "wires": []
     },
     {
@@ -2534,24 +1687,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 970,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "61389890749add36",
-        "type": "debug",
-        "z": "180a8a3d97d7dc3f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 830,
-        "y": 480,
+        "x": 790,
+        "y": 300,
         "wires": []
     },
     {
@@ -2581,25 +1718,8 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 1100,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "216297d666d0a2ad",
-        "type": "debug",
-        "z": "180a8a3d97d7dc3f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 420,
+        "x": 780,
+        "y": 140,
         "wires": []
     },
     {
@@ -2613,14 +1733,1044 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 340,
+        "x": 440,
+        "y": 220,
         "wires": [
             [
-                "216297d666d0a2ad",
                 "77b85ddde90439df"
             ]
         ]
+    },
+    {
+        "id": "39ec5c62f2d67188",
+        "type": "switch",
+        "z": "180a8a3d97d7dc3f",
+        "name": "emit?",
+        "property": "payload.properties",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "emit",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "6d642a7df86dc8c1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6d642a7df86dc8c1",
+        "type": "change",
+        "z": "180a8a3d97d7dc3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "emit_type",
+                "pt": "msg",
+                "to": "payload.properties.emit[\"emit-type\"]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "icao24",
+                "pt": "msg",
+                "to": "payload.properties.icao24",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 60,
+        "wires": [
+            [
+                "88f8a977187c7918"
+            ]
+        ]
+    },
+    {
+        "id": "88f8a977187c7918",
+        "type": "switch",
+        "z": "180a8a3d97d7dc3f",
+        "name": "",
+        "property": "emit_type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "flight",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "service",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "mission",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "0603b312c0dbc578",
+                "9ea682a830cf1b4b"
+            ],
+            [
+                "a70f6c96d0cfcebc"
+            ],
+            [
+                "4e4c918648571f07"
+            ]
+        ]
+    },
+    {
+        "id": "10201afe73aec65c",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "a9ed5848356fb8c3"
+            ]
+        ]
+    },
+    {
+        "id": "0ef9cf1179d2a499",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 870,
+        "y": 140,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "3ce128e96bce2813",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:aerodrome",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "0ef9cf1179d2a499"
+            ]
+        ]
+    },
+    {
+        "id": "97f343c3e2bd8d6f",
+        "type": "worldmap",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "lat": "25.27",
+        "lon": "51.6",
+        "zoom": "14",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1160,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4d73113d1182a182",
+        "type": "redis-in",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "subscribe",
+        "name": "emitpy:raw",
+        "topic": "emitpy:raw",
+        "obj": true,
+        "timeout": 0,
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "7c20b169e2e1ad9f"
+            ]
+        ]
+    },
+    {
+        "id": "1ce897882686d0e1",
+        "type": "debug",
+        "z": "e51c6bf108b92a29",
+        "name": "zadd result",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "7c20b169e2e1ad9f",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "2715a67425b5ed6a"
+            ]
+        ]
+    },
+    {
+        "id": "803b05bb43a16e76",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "1c2db5938b4c316a"
+            ]
+        ]
+    },
+    {
+        "id": "c40632476643ae7b",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "38004e0c391774a4",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:flight",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 600,
+        "y": 200,
+        "wires": [
+            [
+                "c40632476643ae7b"
+            ]
+        ]
+    },
+    {
+        "id": "a969271f71fef5cf",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "c5401c1655b548e4"
+            ]
+        ]
+    },
+    {
+        "id": "328b1931cd791272",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "5bb83ebd8a761a83",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:service",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "328b1931cd791272"
+            ]
+        ]
+    },
+    {
+        "id": "77a91445959a337c",
+        "type": "inject",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "c03cc3cc284bace6"
+            ]
+        ]
+    },
+    {
+        "id": "464aacf0d003f8da",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 870,
+        "y": 320,
+        "wires": [
+            [
+                "97f343c3e2bd8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "310e20d64b11bb2f",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "airport:geometries:mission",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "464aacf0d003f8da"
+            ]
+        ]
+    },
+    {
+        "id": "19297c0646353a3a",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts",
+                "pt": "msg",
+                "to": "payload.properties[\"emit-absolute-time\"]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"type\": \"Feature\",\t    \"properties\": {\t        \"ts\": msg.payload.properties.\"emit-absolute-time\",\t        \"icao24\": msg.payload.properties.icao24\t    },\t    \"geometry\": msg.payload.geometry\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 640,
+        "wires": [
+            [
+                "d056a8cc51d53237"
+            ]
+        ]
+    },
+    {
+        "id": "7cebca3f11c4bded",
+        "type": "redis-command",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "ZADD",
+        "name": "",
+        "topic": "queues:data:heatmap",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 940,
+        "y": 640,
+        "wires": [
+            [
+                "1ce897882686d0e1"
+            ]
+        ]
+    },
+    {
+        "id": "44936f151338df0f",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[msg.ts + 20 * 60, msg.payload]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "7cebca3f11c4bded"
+            ]
+        ]
+    },
+    {
+        "id": "d056a8cc51d53237",
+        "type": "json",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 640,
+        "wires": [
+            [
+                "44936f151338df0f"
+            ]
+        ]
+    },
+    {
+        "id": "11b0cfde95d3dc26",
+        "type": "comment",
+        "z": "e51c6bf108b92a29",
+        "name": "Inject (raw) features into map for debugging",
+        "info": "",
+        "x": 250,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7c36196cde164071",
+        "type": "comment",
+        "z": "e51c6bf108b92a29",
+        "name": "Inject vehicle into map, schedulel its removal from heatmap",
+        "info": "",
+        "x": 300,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d79f468d0c51de79",
+        "type": "redis-in",
+        "z": "e51c6bf108b92a29",
+        "server": "9240c7042e038827",
+        "command": "subscribe",
+        "name": "",
+        "topic": "emitpy:delete",
+        "obj": true,
+        "timeout": 0,
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "ab41ae9961b284df"
+            ]
+        ]
+    },
+    {
+        "id": "ab41ae9961b284df",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t    \"delete\": true,\t    \"name\": msg.payload.properties.icao24,\t    \"geojson\": msg.payload\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9ed5848356fb8c3",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "3ce128e96bce2813"
+            ]
+        ]
+    },
+    {
+        "id": "1c2db5938b4c316a",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "38004e0c391774a4"
+            ]
+        ]
+    },
+    {
+        "id": "c5401c1655b548e4",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "5bb83ebd8a761a83"
+            ]
+        ]
+    },
+    {
+        "id": "c03cc3cc284bace6",
+        "type": "change",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "310e20d64b11bb2f"
+            ]
+        ]
+    },
+    {
+        "id": "2715a67425b5ed6a",
+        "type": "worldmap",
+        "z": "e51c6bf108b92a29",
+        "name": "",
+        "lat": "25.27",
+        "lon": "51.6",
+        "zoom": "14",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1220,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7db4dc5027e1290e",
+        "type": "redis-instance",
+        "z": "955d0aae4f0edf24",
+        "server": "9240c7042e038827",
+        "name": "",
+        "topic": "redis",
+        "location": "global",
+        "x": 990,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9caa8dacb9010542",
+        "type": "comment",
+        "z": "955d0aae4f0edf24",
+        "name": "Load data on startup",
+        "info": "",
+        "x": 160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ed8af195dd3fd7c8",
+        "type": "inject",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "b66f55b046867836",
+                "456a5306fc5ea507"
+            ]
+        ]
+    },
+    {
+        "id": "15ae93ecc5e0fbc5",
+        "type": "redis-command",
+        "z": "955d0aae4f0edf24",
+        "server": "9240c7042e038827",
+        "command": "KEYS",
+        "name": "",
+        "topic": "airport:areas:*",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "77bd3a1feed7d8c5"
+            ]
+        ]
+    },
+    {
+        "id": "77bd3a1feed7d8c5",
+        "type": "split",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "eaaf215fb08b0b42"
+            ]
+        ]
+    },
+    {
+        "id": "eaaf215fb08b0b42",
+        "type": "change",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 360,
+        "wires": [
+            [
+                "ad521ec8f11ae2b9"
+            ]
+        ]
+    },
+    {
+        "id": "ad521ec8f11ae2b9",
+        "type": "redis-command",
+        "z": "955d0aae4f0edf24",
+        "server": "9240c7042e038827",
+        "command": "JSON.GET",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 1020,
+        "y": 360,
+        "wires": [
+            [
+                "ab3d23c3a2d00932"
+            ]
+        ]
+    },
+    {
+        "id": "ab3d23c3a2d00932",
+        "type": "json",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "856d0d350468a4e0"
+            ]
+        ]
+    },
+    {
+        "id": "856d0d350468a4e0",
+        "type": "function",
+        "z": "955d0aae4f0edf24",
+        "name": "save geom in global",
+        "func": "let name = msg.topic.split(\":\")[2];\ncontext.global.set(name, msg.payload);\nmsg.payload = name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "0c7a04c2d5b6ac2c"
+            ]
+        ]
+    },
+    {
+        "id": "0c7a04c2d5b6ac2c",
+        "type": "debug",
+        "z": "955d0aae4f0edf24",
+        "name": "global saved",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "456a5306fc5ea507",
+        "type": "change",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "15ae93ecc5e0fbc5"
+            ]
+        ]
+    },
+    {
+        "id": "b66f55b046867836",
+        "type": "file in",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "filename": "data/requests.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "a871952701b21ea8"
+            ]
+        ]
+    },
+    {
+        "id": "933cb4522c5335fb",
+        "type": "debug",
+        "z": "955d0aae4f0edf24",
+        "name": "requests",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a871952701b21ea8",
+        "type": "csv",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 680,
+        "wires": [
+            [
+                "717eefcd2588459a"
+            ]
+        ]
+    },
+    {
+        "id": "717eefcd2588459a",
+        "type": "change",
+        "z": "955d0aae4f0edf24",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "requests",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "933cb4522c5335fb"
+            ]
+        ]
+    },
+    {
+        "id": "f03631f67510c90b",
+        "type": "comment",
+        "z": "955d0aae4f0edf24",
+        "name": "Load geometries",
+        "info": "",
+        "x": 140,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1f062d0883389fbd",
+        "type": "comment",
+        "z": "955d0aae4f0edf24",
+        "name": "Load requests",
+        "info": "",
+        "x": 130,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "a44128e4f36f374c",
@@ -2634,7 +2784,7 @@
         "finalize": "",
         "libs": [],
         "x": 140,
-        "y": 460,
+        "y": 560,
         "wires": [
             []
         ]
@@ -2651,7 +2801,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
+        "x": 300,
         "y": 180,
         "wires": [
             [
@@ -2694,7 +2844,7 @@
         "y": 180,
         "wires": [
             [
-                "3a8490782b1eb635"
+                "0cf6de293aed4548"
             ]
         ]
     },
@@ -2710,11 +2860,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 810,
+        "x": 650,
         "y": 180,
         "wires": [
             [
-                "cdafad873607bfa7"
+                "af98fc5a61e185f6"
             ]
         ]
     },
@@ -2728,7 +2878,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:flight",
+                "to": "airport:areas:flight",
                 "tot": "str"
             },
             {
@@ -2744,7 +2894,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 490,
         "y": 180,
         "wires": [
             [
@@ -2764,7 +2914,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
+        "x": 300,
         "y": 240,
         "wires": [
             [
@@ -2797,7 +2947,7 @@
         "y": 240,
         "wires": [
             [
-                "13aacab1afd6e198"
+                "bf3f3541d652d31c"
             ]
         ]
     },
@@ -2813,11 +2963,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 810,
+        "x": 650,
         "y": 240,
         "wires": [
             [
-                "cdafad873607bfa7"
+                "af98fc5a61e185f6"
             ]
         ]
     },
@@ -2831,7 +2981,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:service",
+                "to": "airport:areas:service",
                 "tot": "str"
             },
             {
@@ -2847,7 +2997,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 490,
         "y": 240,
         "wires": [
             [
@@ -2867,7 +3017,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
+        "x": 300,
         "y": 300,
         "wires": [
             [
@@ -2900,7 +3050,7 @@
         "y": 300,
         "wires": [
             [
-                "e298b19827804f53"
+                "fc7ed709bc322e63"
             ]
         ]
     },
@@ -2916,11 +3066,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 810,
+        "x": 650,
         "y": 300,
         "wires": [
             [
-                "cdafad873607bfa7"
+                "af98fc5a61e185f6"
             ]
         ]
     },
@@ -2934,7 +3084,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:mission",
+                "to": "airport:areas:mission",
                 "tot": "str"
             },
             {
@@ -2950,7 +3100,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 490,
         "y": 300,
         "wires": [
             [
@@ -2970,7 +3120,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
+        "x": 300,
         "y": 120,
         "wires": [
             [
@@ -3003,7 +3153,7 @@
         "y": 120,
         "wires": [
             [
-                "97469380928d4ac2"
+                "4ee75939984eaf12"
             ]
         ]
     },
@@ -3019,11 +3169,11 @@
         "paramsType": "json",
         "payloadType": "json",
         "block": false,
-        "x": 810,
+        "x": 650,
         "y": 120,
         "wires": [
             [
-                "cdafad873607bfa7"
+                "af98fc5a61e185f6"
             ]
         ]
     },
@@ -3037,7 +3187,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "airport:geometries:aerodrome",
+                "to": "airport:areas:aerodrome",
                 "tot": "str"
             },
             {
@@ -3053,7 +3203,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 490,
         "y": 120,
         "wires": [
             [
@@ -3074,74 +3224,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 200,
+        "x": 880,
+        "y": 220,
         "wires": []
-    },
-    {
-        "id": "97469380928d4ac2",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "af63c5f168f03802",
-        "name": "",
-        "x": 300,
-        "y": 120,
-        "wires": [
-            [
-                "4ee75939984eaf12"
-            ]
-        ]
-    },
-    {
-        "id": "3a8490782b1eb635",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "af63c5f168f03802",
-        "name": "",
-        "x": 300,
-        "y": 180,
-        "wires": [
-            [
-                "0cf6de293aed4548"
-            ]
-        ]
-    },
-    {
-        "id": "13aacab1afd6e198",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "af63c5f168f03802",
-        "name": "",
-        "x": 300,
-        "y": 240,
-        "wires": [
-            [
-                "bf3f3541d652d31c"
-            ]
-        ]
-    },
-    {
-        "id": "e298b19827804f53",
-        "type": "subflow:d4a976387a559a5b",
-        "z": "af63c5f168f03802",
-        "name": "",
-        "x": 300,
-        "y": 300,
-        "wires": [
-            [
-                "fc7ed709bc322e63"
-            ]
-        ]
-    },
-    {
-        "id": "cdafad873607bfa7",
-        "type": "subflow:5aa781e7fd97726c",
-        "z": "af63c5f168f03802",
-        "name": "",
-        "x": 1000,
-        "y": 200,
-        "wires": [
-            [
-                "af98fc5a61e185f6"
-            ]
-        ]
     },
     {
         "id": "bc8231b7f5656897",
@@ -3155,9 +3240,73 @@
         "finalize": "",
         "libs": [],
         "x": 90,
-        "y": 520,
+        "y": 620,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "dcf75a7df0d1cc25",
+        "type": "inject",
+        "z": "60cc1bf19cdd50f1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "75b2d0a9f1de35eb"
+            ]
+        ]
+    },
+    {
+        "id": "75b2d0a9f1de35eb",
+        "type": "function",
+        "z": "60cc1bf19cdd50f1",
+        "name": "function 1",
+        "func": "let fc = context.global.get(\"aerodrome\");\nlet utils = context.global.get(\"utils\");\n\nmsg.payload = utils.findFeature(fc, \"OTHH:aerodrome:aerodrome:perimeter\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "f76ce2c731acef13"
+            ]
+        ]
+    },
+    {
+        "id": "f76ce2c731acef13",
+        "type": "debug",
+        "z": "60cc1bf19cdd50f1",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
     }
 ]
