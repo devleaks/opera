@@ -416,25 +416,6 @@
             }
         }
     },
-    "node-red-contrib-jsonpath": {
-        "name": "node-red-contrib-jsonpath",
-        "version": "0.1.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "jsonpath": {
-                "name": "jsonpath",
-                "types": [
-                    "jsonpath"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-jsonpath",
-                "file": "/Users/pierre/Developer/oscars/opera/node_modules/node-red-contrib-jsonpath/jsonpath/node-red-contrib-jsonpath.js"
-            }
-        }
-    },
     "node-red-contrib-redis": {
         "name": "node-red-contrib-redis",
         "version": "1.3.9",
@@ -718,6 +699,25 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "/Users/pierre/Developer/oscars/opera/node_modules/node-red-dashboard/nodes/ui_spacer.js"
+            }
+        }
+    },
+    "node-red-contrib-msg-speed": {
+        "name": "node-red-contrib-msg-speed",
+        "version": "2.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "msg-speed": {
+                "name": "msg-speed",
+                "types": [
+                    "msg-speed"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-msg-speed",
+                "file": "/Users/pierre/Developer/oscars/opera/node_modules/node-red-contrib-msg-speed/msg_speed.js"
             }
         }
     }

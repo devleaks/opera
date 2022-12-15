@@ -48,6 +48,9 @@
             "user": {
                 "name": "Pierre Mareschal",
                 "email": "pierre@devleaks.be"
+            },
+            "workflow": {
+                "mode": "manual"
             }
         }
     }

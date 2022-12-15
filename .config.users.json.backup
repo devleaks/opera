@@ -39,6 +39,16 @@
                 "697c04deb4c916b7",
                 "8e8ea08171187067"
             ]
+        },
+        "git": {
+            "globalUser": {
+                "name": "Pierre Mareschal",
+                "email": "pierre@devleaks.be"
+            },
+            "user": {
+                "name": "Pierre Mareschal",
+                "email": "pierre@devleaks.be"
+            }
         }
     }
 }
