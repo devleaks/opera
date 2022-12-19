@@ -421,6 +421,7 @@ module.exports = {
         h3: require('h3-js'),
         h3Polyfill: require("h3-polyfill"),
         turf: require('@turf/turf'),
+        chroma: require('chroma-js'),
         utils: require('./lib/utils/index.js')
 //        geoflatbush:require('geoflatbush')
 //        flatbush:require('flatbush')

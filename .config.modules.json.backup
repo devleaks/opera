@@ -4,5 +4,11 @@
         "module": "jsonata",
         "builtin": false,
         "known": false
+    },
+    "utils": {
+        "spec": "utils",
+        "module": "utils",
+        "builtin": false,
+        "known": false
     }
 }

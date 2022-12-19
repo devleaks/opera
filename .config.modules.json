@@ -10,5 +10,11 @@
         "module": "utils",
         "builtin": false,
         "known": false
+    },
+    "chroma": {
+        "spec": "chroma",
+        "module": "chroma",
+        "builtin": false,
+        "known": false
     }
 }
