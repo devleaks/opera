@@ -29,6 +29,7 @@ MANIFEST
 .yarn/
 node_modules/
 data/
+tests/
 
 *.geojson
 

@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "c82eb5865b7fea0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c2f4654fa296f85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e69778ca5b1d75b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "emitpy/Emitpy – Usage Exemple.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "703cbcd2aee32656",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "5b367afbe22ae2f7",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "abd1ab84aad74fcc",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "b1261e8e23ca95ed",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "24c914e6fe7cd0cb",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "7730b62aaa8e7338",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "1e2a25dc3722eddf",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "emitpy/Emitpy – Usage Exemple.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "2992e9830d0a9113",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "emitpy/Emitpy – Usage Exemple.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "6d6ff19ad4b94cd1",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "emitpy/Emitpy – Usage Exemple.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "e69778ca5b1d75b4",
+  "lastOpenFiles": [
+    "emitpy/Message Broadcast/Broadcast.md",
+    "emitpy/Message Broadcast/Emit, Schedule, Format.md",
+    "emitpy/Message Broadcast/Movement.md",
+    "emitpy/Flight/Flight.md",
+    "emitpy/Airport/Managed Airport.md",
+    "emitpy/Service/Service.md",
+    "emitpy/Airport/Airport Manager.md",
+    "emitpy/Airport/Airport.md",
+    "emitpy/Flight/Aerospace.md",
+    "emitpy/Emitpy – ADS-B Track Generator.md"
+  ]
+}
